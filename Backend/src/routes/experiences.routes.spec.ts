@@ -68,7 +68,7 @@ test('GET /api/experiences should include position statuses and the Akkodis Site
   assert.ok(icGreenExperience.technologies.some(
     (technology: { name: string }) => technology.name === 'i18n'
   ));
-  assert.match(icGreenExperience.highlights[2], /Lead and coordinate development teams/);
+  assert.match(icGreenExperience.highlights[2], /Led and coordinated development teams/);
   assert.match(icGreenExperience.highlights[3], /connecting multiple robots/);
   assert.match(icGreenExperience.highlights[3], /security, routing, load balancing/);
   assert.match(icGreenExperience.highlights[3], /SQL and NoSQL databases/);

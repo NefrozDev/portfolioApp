@@ -232,11 +232,11 @@
         "company": "IC-Green",
         "period": "May 2025 - Aug 2026",
         "highlights": [
-          "Lead the development of an autonomous agricultural robotics platform designed to remove weeds without toxic herbicides.",
-          "Drive software architecture, development activities, and technical direction across the robot software ecosystem.",
-          "Lead and coordinate development teams working on robot implementation, testing, validation, and field-ready software delivery.",
-          "Develop full-stack features for an Angular operator interface and a distributed architecture connecting multiple robots, each running a Node.js backend, to a chain of online Node.js servers. These servers handle security, routing, load balancing, and communication with multiple SQL and NoSQL databases, including logging stores.",
-          "Collaborate with robotics, AI, and hardware engineers to integrate AI-powered weed detection into operational workflows."
+          "Led the development of an autonomous agricultural robotics platform designed to remove weeds without toxic herbicides.",
+          "Drove software architecture, development activities, and technical direction across the robot software ecosystem.",
+          "Led and coordinated development teams working on robot implementation, testing, validation, and field-ready software delivery.",
+          "Developed full-stack features for an Angular operator interface and a distributed architecture connecting multiple robots, each running a Node.js backend, to a chain of online Node.js servers. These servers handle security, routing, load balancing, and communication with multiple SQL and NoSQL databases, including logging stores.",
+          "Collaborated with robotics, AI, and hardware engineers to integrate AI-powered weed detection into operational workflows."
         ]
       },
       "tihange-software-engineer": {

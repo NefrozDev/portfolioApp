@@ -107,9 +107,9 @@ describe('I18nService', () => {
     }
   });
 
-  it('should use idiomatic resume phrasing for current-role responsibilities', () => {
+  it('should use idiomatic resume phrasing for the IC-Green responsibilities', () => {
     const expectedOpenings = {
-      [AppLanguage.EN]: ['Lead ', 'Drive '],
+      [AppLanguage.EN]: ['Led ', 'Drove '],
       [AppLanguage.FR]: ['Pilotage ', 'Définition '],
       [AppLanguage.NL]: ['Leiding ', 'Bepaling '],
       [AppLanguage.ES]: ['Liderazgo ', 'Definición '],
