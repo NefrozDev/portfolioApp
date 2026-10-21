@@ -290,6 +290,26 @@ const EXPERIENCE_METADATA: Array<
       { name: 'Windows' }
     ],
     isExpanded: false
+  },
+  {
+    id: 'selectos-web-intern',
+    role: 'Web Developer',
+    status: 'intern',
+    logoUrl: '/img/experiences/selectos.png',
+    technologies: [
+      { name: 'JavaScript' },
+      { name: 'PHP' },
+      { name: 'WordPress' }
+    ],
+    isExpanded: false
+  },
+  {
+    id: 'bluefeet-web-intern',
+    role: 'Web Developer',
+    status: 'intern',
+    logoUrl: '/img/experiences/bluefeet.png',
+    technologies: [{ name: 'JavaScript' }, { name: 'PHP' }],
+    isExpanded: false
   }
 ];
 

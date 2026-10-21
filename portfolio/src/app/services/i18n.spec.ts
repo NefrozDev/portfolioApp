@@ -75,6 +75,14 @@ describe('I18nService', () => {
       [AppLanguage.IT]: 'Quadro',
       [AppLanguage.DE]: 'Führungskraft'
     };
+    const expectedInternLabels = {
+      [AppLanguage.EN]: 'Intern',
+      [AppLanguage.FR]: 'Stagiaire',
+      [AppLanguage.NL]: 'Stagiair',
+      [AppLanguage.ES]: 'Becario',
+      [AppLanguage.IT]: 'Stagista',
+      [AppLanguage.DE]: 'Praktikant'
+    };
 
     for (const language of Object.values(AppLanguage)) {
       const statuses = APP_TRANSLATIONS[language].experiences.statuses;
@@ -84,9 +92,11 @@ describe('I18nService', () => {
         'freelance',
         'self-employed',
         'cadre',
-        'corporate'
+        'corporate',
+        'intern'
       ]);
       expect(statuses.cadre).toBe(expectedCadreLabels[language]);
+      expect(statuses.intern).toBe(expectedInternLabels[language]);
     }
   });
 

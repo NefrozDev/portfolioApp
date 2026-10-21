@@ -76,10 +76,44 @@ test('GET /api/experiences should include position statuses and the Akkodis Site
     response.body
       .filter(
         (experience: { id: string }) =>
-          !['akkodis-pg-site-leader', 'icgreen-lead-dev'].includes(experience.id)
+          ![
+            'akkodis-pg-site-leader',
+            'icgreen-lead-dev',
+            'selectos-web-intern',
+            'bluefeet-web-intern'
+          ].includes(experience.id)
       )
       .every((experience: { status: string }) => experience.status === 'employee')
   );
+});
+
+test('GET /api/experiences should list the Selectos and Bluefeet internships last', async () => {
+  const response = await request(app).get('/api/experiences?lang=fr');
+  const [selectosExperience, bluefeetExperience] = response.body.slice(-2);
+
+  assert.equal(response.status, 200);
+  assert.equal(selectosExperience.id, 'selectos-web-intern');
+  assert.equal(selectosExperience.company, 'Selectos');
+  assert.equal(selectosExperience.role, 'Web Developer');
+  assert.equal(selectosExperience.status, 'intern');
+  assert.equal(selectosExperience.period, 'Févr 2017 - Mai 2017');
+  assert.equal(selectosExperience.logoUrl, '/img/experiences/selectos.png');
+  assert.deepEqual(
+    selectosExperience.technologies.map((technology: { name: string }) => technology.name),
+    ['JavaScript', 'PHP', 'WordPress']
+  );
+  assert.match(selectosExperience.highlights[0], /site WordPress/);
+  assert.equal(bluefeetExperience.id, 'bluefeet-web-intern');
+  assert.equal(bluefeetExperience.company, 'Bluefeet');
+  assert.equal(bluefeetExperience.status, 'intern');
+  assert.equal(bluefeetExperience.period, 'Févr 2016');
+  assert.equal(bluefeetExperience.logoUrl, '/img/experiences/bluefeet.png');
+  assert.deepEqual(
+    bluefeetExperience.technologies.map((technology: { name: string }) => technology.name),
+    ['JavaScript', 'PHP']
+  );
+  assert.equal(bluefeetExperience.highlights.length, 1);
+  assert.equal(bluefeetExperience.recommendationLetterUrl, undefined);
 });
 
 test('GET /api/experiences should keep role titles language-neutral', async () => {

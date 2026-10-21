@@ -3,7 +3,8 @@ export type PositionStatus =
   | 'freelance'
   | 'self-employed'
   | 'cadre'
-  | 'corporate';
+  | 'corporate'
+  | 'intern';
 
 export interface TechnologyTag {
   name: string;

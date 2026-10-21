@@ -52,6 +52,9 @@
       "azureDevOps": "Azure DevOps es un conjunto de servicios para planificar, crear, probar y publicar software.",
       "fastApi": "FastAPI es una caja de herramientas de Python para crear API web.",
       "python": "Python es un lenguaje de programación usado para servicios web, automatización, procesamiento de datos e IA.",
+      "javaScript": "JavaScript es un lenguaje de programación usado para hacer interactivas las páginas web y, con Node.js, ejecutar código en servidores.",
+      "php": "PHP es un lenguaje de programación usado principalmente para generar páginas web y ejecutar la parte de servidor de los sitios.",
+      "wordPress": "WordPress es un sistema de gestión de contenidos escrito en PHP, usado para crear y administrar sitios web sin programar cada página.",
       "dynamics365": "Microsoft Dynamics 365 es un conjunto de aplicaciones empresariales para clientes, ventas y procesos operativos.",
       "powerPlatform": "Power Platform es una plataforma low-code para crear aplicaciones y automatizar procesos.",
       "ionic": "Ionic es una caja de herramientas de JavaScript y TypeScript para crear aplicaciones móviles con tecnologías web.",
@@ -163,7 +166,8 @@
       "freelance": "Freelance",
       "self-employed": "Autónomo",
       "cadre": "Directivo",
-      "corporate": "Corporativo"
+      "corporate": "Corporativo",
+      "intern": "Becario"
     }
   },
   "contact": {
@@ -311,6 +315,21 @@
           "Trabajé en una aplicación full-stack para gestionar reservas de salas en servicios públicos.",
           "Contribuí al front-end Angular y al backend Node.js, incluyendo lógica de negocio e interacciones con bases de datos.",
           "Participé en el diseño de interfaces de usuario y en la integración entre las distintas partes de la aplicación."
+        ]
+      },
+      "selectos-web-intern": {
+        "company": "Selectos",
+        "period": "Feb 2017 - May 2017",
+        "highlights": [
+          "Desarrollo de varias funcionalidades nuevas para el sitio WordPress de la empresa.",
+          "Trabajo con JavaScript y PHP tanto en el front-end como en el back-end del sitio."
+        ]
+      },
+      "bluefeet-web-intern": {
+        "company": "Bluefeet",
+        "period": "Feb 2016",
+        "highlights": [
+          "Participación en trabajos de desarrollo web con JavaScript y PHP."
         ]
       }
     }

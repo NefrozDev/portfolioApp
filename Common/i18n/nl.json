@@ -52,6 +52,9 @@
       "azureDevOps": "Azure DevOps is een dienstenpakket voor het plannen, bouwen, testen en uitbrengen van software.",
       "fastApi": "FastAPI is een Python-gereedschapskist voor het bouwen van web-API's.",
       "python": "Python is een programmeertaal voor webdiensten, automatisering, gegevensverwerking en AI.",
+      "javaScript": "JavaScript is een programmeertaal om webpagina's interactief te maken en, met Node.js, code op servers uit te voeren.",
+      "php": "PHP is een programmeertaal die vooral wordt gebruikt om webpagina's te genereren en de serverkant van websites te laten draaien.",
+      "wordPress": "WordPress is een contentmanagementsysteem geschreven in PHP, waarmee websites worden gebouwd en beheerd zonder elke pagina te programmeren.",
       "dynamics365": "Microsoft Dynamics 365 is een pakket bedrijfsapplicaties voor klant-, verkoop- en operationele processen.",
       "powerPlatform": "Power Platform is een low-codeplatform voor het bouwen van applicaties en automatiseren van werkprocessen.",
       "ionic": "Ionic is een JavaScript- en TypeScript-gereedschapskist voor het bouwen van mobiele applicaties met webtechnologie.",
@@ -163,7 +166,8 @@
       "freelance": "Freelance",
       "self-employed": "Zelfstandige",
       "cadre": "Kaderlid",
-      "corporate": "Corporate"
+      "corporate": "Corporate",
+      "intern": "Stagiair"
     }
   },
   "contact": {
@@ -311,6 +315,21 @@
           "Werkte aan een full-stack applicatie voor het beheer van zaalreservaties in openbare diensten.",
           "Droeg bij aan de Angular-front-end en Node.js-backend, waaronder businesslogica en database-interacties.",
           "Werkte mee aan het ontwerp van gebruikersinterfaces en de integratie tussen de verschillende onderdelen van de applicatie."
+        ]
+      },
+      "selectos-web-intern": {
+        "company": "Selectos",
+        "period": "Feb 2017 - Mei 2017",
+        "highlights": [
+          "Ontwikkeling van meerdere nieuwe functies voor de WordPress-website van het bedrijf.",
+          "Werk met JavaScript en PHP aan zowel de front-end als de back-end van de site."
+        ]
+      },
+      "bluefeet-web-intern": {
+        "company": "Bluefeet",
+        "period": "Feb 2016",
+        "highlights": [
+          "Deelname aan webontwikkelingswerk met JavaScript en PHP."
         ]
       }
     }

@@ -52,6 +52,9 @@
       "azureDevOps": "Azure DevOps is a suite of services for planning, building, testing and releasing software.",
       "fastApi": "FastAPI is a Python framework for building web APIs.",
       "python": "Python is a programming language used for web services, automation, data processing and AI.",
+      "javaScript": "JavaScript is a programming language used to make web pages interactive and, with Node.js, to run code on servers.",
+      "php": "PHP is a programming language used mainly to generate web pages and run the server side of websites.",
+      "wordPress": "WordPress is a content management system written in PHP, used to build and manage websites without coding every page.",
       "dynamics365": "Microsoft Dynamics 365 is a suite of business applications for customer, sales and operational processes.",
       "powerPlatform": "Power Platform is a low-code platform for building applications and automating workflows.",
       "ionic": "Ionic is a JavaScript and TypeScript framework for building mobile applications with web technologies.",
@@ -163,7 +166,8 @@
       "freelance": "Freelance",
       "self-employed": "Self-employed",
       "cadre": "Executive",
-      "corporate": "Corporate"
+      "corporate": "Corporate",
+      "intern": "Intern"
     }
   },
   "contact": {
@@ -311,6 +315,21 @@
           "Worked on a full-stack application for managing room reservations in public services.",
           "Contributed to the Angular front end and Node.js backend, including business logic and database interactions.",
           "Participated in user interface design and integration between the different parts of the application."
+        ]
+      },
+      "selectos-web-intern": {
+        "company": "Selectos",
+        "period": "Feb 2017 - May 2017",
+        "highlights": [
+          "Developed several new features for the company's WordPress website.",
+          "Worked with JavaScript and PHP on both the front end and the back end of the site."
+        ]
+      },
+      "bluefeet-web-intern": {
+        "company": "Bluefeet",
+        "period": "Feb 2016",
+        "highlights": [
+          "Took part in web development work using JavaScript and PHP."
         ]
       }
     }

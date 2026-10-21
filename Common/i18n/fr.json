@@ -52,6 +52,9 @@
       "azureDevOps": "Azure DevOps est une suite de services pour planifier, créer, tester et publier des logiciels.",
       "fastApi": "FastAPI est une boîte à outils Python pour créer des API web.",
       "python": "Python est un langage de programmation utilisé pour les services web, l’automatisation, le traitement des données et l’IA.",
+      "javaScript": "JavaScript est un langage de programmation utilisé pour rendre les pages web interactives et, avec Node.js, pour exécuter du code sur des serveurs.",
+      "php": "PHP est un langage de programmation utilisé principalement pour générer des pages web et faire fonctionner la partie serveur des sites.",
+      "wordPress": "WordPress est un système de gestion de contenu écrit en PHP, utilisé pour créer et administrer des sites web sans coder chaque page.",
       "dynamics365": "Microsoft Dynamics 365 est une suite d’applications métier pour la gestion des clients, des ventes et des opérations.",
       "powerPlatform": "Power Platform est une plateforme low-code pour créer des applications et automatiser des processus.",
       "ionic": "Ionic est une boîte à outils JavaScript et TypeScript pour créer des applications mobiles avec des technologies web.",
@@ -163,7 +166,8 @@
       "freelance": "Freelance",
       "self-employed": "Indépendant",
       "cadre": "Cadre",
-      "corporate": "Corporate"
+      "corporate": "Corporate",
+      "intern": "Stagiaire"
     }
   },
   "contact": {
@@ -311,6 +315,21 @@
           "Participation au développement d'une application full-stack de gestion de réservations de salles pour des services publics.",
           "Contribution au front-end Angular et au backend Node.js, notamment à la logique métier et aux interactions avec la base de données.",
           "Participation à la conception des interfaces utilisateur et à l'intégration des différentes parties de l'application."
+        ]
+      },
+      "selectos-web-intern": {
+        "company": "Selectos",
+        "period": "Févr 2017 - Mai 2017",
+        "highlights": [
+          "Développement de plusieurs nouvelles fonctionnalités pour le site WordPress de l'entreprise.",
+          "Travail en JavaScript et en PHP, côté front-end comme côté back-end du site."
+        ]
+      },
+      "bluefeet-web-intern": {
+        "company": "Bluefeet",
+        "period": "Févr 2016",
+        "highlights": [
+          "Participation à des travaux de développement web en JavaScript et en PHP."
         ]
       }
     }
