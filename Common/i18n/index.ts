@@ -293,7 +293,7 @@ const EXPERIENCE_METADATA: Array<
   },
   {
     id: 'bloody-halloween-cofounder',
-    role: 'Co-Founder & Entrepreneur',
+    role: 'Co-Founder & Developer',
     status: 'self-employed',
     logoUrl: '/img/experiences/bloody-halloween.svg',
     technologies: [

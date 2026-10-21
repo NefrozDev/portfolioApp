@@ -103,7 +103,7 @@ test('GET /api/experiences should place the Bloody Halloween co-founder role bef
     'bluefeet-web-intern'
   ]);
   assert.equal(bloodyHalloweenExperience.company, 'Bloody Halloween');
-  assert.equal(bloodyHalloweenExperience.role, 'Co-Founder & Entrepreneur');
+  assert.equal(bloodyHalloweenExperience.role, 'Co-Founder & Developer');
   assert.equal(bloodyHalloweenExperience.status, 'self-employed');
   assert.equal(bloodyHalloweenExperience.period, 'Juin 2018 - Nov 2018');
   assert.equal(bloodyHalloweenExperience.logoUrl, '/img/experiences/bloody-halloween.svg');
