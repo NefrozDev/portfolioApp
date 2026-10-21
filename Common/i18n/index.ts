@@ -292,6 +292,19 @@ const EXPERIENCE_METADATA: Array<
     isExpanded: false
   },
   {
+    id: 'bloody-halloween-cofounder',
+    role: 'Co-Founder & Entrepreneur',
+    status: 'self-employed',
+    logoUrl: '/img/experiences/bloody-halloween.svg',
+    technologies: [
+      { name: 'JavaScript' },
+      { name: 'PHP' },
+      { name: 'Shopify' },
+      { name: 'Leadership' }
+    ],
+    isExpanded: false
+  },
+  {
     id: 'selectos-web-intern',
     role: 'Web Developer',
     status: 'intern',

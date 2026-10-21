@@ -55,6 +55,7 @@
       "javaScript": "JavaScript est un langage de programmation utilisé pour rendre les pages web interactives et, avec Node.js, pour exécuter du code sur des serveurs.",
       "php": "PHP est un langage de programmation utilisé principalement pour générer des pages web et faire fonctionner la partie serveur des sites.",
       "wordPress": "WordPress est un système de gestion de contenu écrit en PHP, utilisé pour créer et administrer des sites web sans coder chaque page.",
+      "shopify": "Shopify est une plateforme d'e-commerce utilisée pour créer et gérer des boutiques en ligne, extensibles avec des thèmes et des applications.",
       "dynamics365": "Microsoft Dynamics 365 est une suite d’applications métier pour la gestion des clients, des ventes et des opérations.",
       "powerPlatform": "Power Platform est une plateforme low-code pour créer des applications et automatiser des processus.",
       "ionic": "Ionic est une boîte à outils JavaScript et TypeScript pour créer des applications mobiles avec des technologies web.",
@@ -315,6 +316,16 @@
           "Participation au développement d'une application full-stack de gestion de réservations de salles pour des services publics.",
           "Contribution au front-end Angular et au backend Node.js, notamment à la logique métier et aux interactions avec la base de données.",
           "Participation à la conception des interfaces utilisateur et à l'intégration des différentes parties de l'application."
+        ]
+      },
+      "bloody-halloween-cofounder": {
+        "company": "Bloody Halloween",
+        "period": "Juin 2018 - Nov 2018",
+        "highlights": [
+          "Cofondation de Bloody Halloween, une boutique en ligne saisonnière proposant des produits sur le thème d'Halloween au marché américain.",
+          "Prise en charge de l'ensemble de la partie technique de la boutique, dont le développement JavaScript et PHP sur Shopify.",
+          "Mise en commun de compétences en vente, en marketing sur les réseaux sociaux et en développement au sein de l'équipe fondatrice.",
+          "Exploitation de la boutique pendant six mois."
         ]
       },
       "selectos-web-intern": {

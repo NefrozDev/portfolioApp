@@ -34,6 +34,7 @@ const GLOSSARY_INFO_KEYS = {
   JavaScript: 'app.glossary.javaScript',
   PHP: 'app.glossary.php',
   WordPress: 'app.glossary.wordPress',
+  Shopify: 'app.glossary.shopify',
   'Microsoft Dynamics 365': 'app.glossary.dynamics365',
   'Power Platform': 'app.glossary.powerPlatform',
   Ionic: 'app.glossary.ionic',

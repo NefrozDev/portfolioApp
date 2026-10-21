@@ -79,12 +79,41 @@ test('GET /api/experiences should include position statuses and the Akkodis Site
           ![
             'akkodis-pg-site-leader',
             'icgreen-lead-dev',
+            'bloody-halloween-cofounder',
             'selectos-web-intern',
             'bluefeet-web-intern'
           ].includes(experience.id)
       )
       .every((experience: { status: string }) => experience.status === 'employee')
   );
+});
+
+test('GET /api/experiences should place the Bloody Halloween co-founder role before the internships', async () => {
+  const response = await request(app).get('/api/experiences?lang=fr');
+  const experienceIds = response.body.map((experience: { id: string }) => experience.id);
+  const bloodyHalloweenExperience = response.body.find(
+    (experience: { id: string }) => experience.id === 'bloody-halloween-cofounder'
+  );
+
+  assert.equal(response.status, 200);
+  assert.deepEqual(experienceIds.slice(-4), [
+    'inforius-fullstack',
+    'bloody-halloween-cofounder',
+    'selectos-web-intern',
+    'bluefeet-web-intern'
+  ]);
+  assert.equal(bloodyHalloweenExperience.company, 'Bloody Halloween');
+  assert.equal(bloodyHalloweenExperience.role, 'Co-Founder & Entrepreneur');
+  assert.equal(bloodyHalloweenExperience.status, 'self-employed');
+  assert.equal(bloodyHalloweenExperience.period, 'Juin 2018 - Nov 2018');
+  assert.equal(bloodyHalloweenExperience.logoUrl, '/img/experiences/bloody-halloween.svg');
+  assert.deepEqual(
+    bloodyHalloweenExperience.technologies.map((technology: { name: string }) => technology.name),
+    ['JavaScript', 'PHP', 'Shopify', 'Leadership']
+  );
+  assert.equal(bloodyHalloweenExperience.highlights.length, 4);
+  assert.match(bloodyHalloweenExperience.highlights[1], /JavaScript et PHP sur Shopify/);
+  assert.equal(bloodyHalloweenExperience.recommendationLetterUrl, undefined);
 });
 
 test('GET /api/experiences should list the Selectos and Bluefeet internships last', async () => {

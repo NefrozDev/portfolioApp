@@ -177,6 +177,7 @@ describe('InfoTerm', () => {
       'JavaScript',
       'PHP',
       'WordPress',
+      'Shopify',
       'Microsoft Dynamics 365',
       'Power Platform',
       'Ionic',

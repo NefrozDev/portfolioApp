@@ -55,6 +55,7 @@
       "javaScript": "JavaScript es un lenguaje de programación usado para hacer interactivas las páginas web y, con Node.js, ejecutar código en servidores.",
       "php": "PHP es un lenguaje de programación usado principalmente para generar páginas web y ejecutar la parte de servidor de los sitios.",
       "wordPress": "WordPress es un sistema de gestión de contenidos escrito en PHP, usado para crear y administrar sitios web sin programar cada página.",
+      "shopify": "Shopify es una plataforma de comercio electrónico usada para crear y gestionar tiendas online, ampliables con temas y aplicaciones.",
       "dynamics365": "Microsoft Dynamics 365 es un conjunto de aplicaciones empresariales para clientes, ventas y procesos operativos.",
       "powerPlatform": "Power Platform es una plataforma low-code para crear aplicaciones y automatizar procesos.",
       "ionic": "Ionic es una caja de herramientas de JavaScript y TypeScript para crear aplicaciones móviles con tecnologías web.",
@@ -315,6 +316,16 @@
           "Trabajé en una aplicación full-stack para gestionar reservas de salas en servicios públicos.",
           "Contribuí al front-end Angular y al backend Node.js, incluyendo lógica de negocio e interacciones con bases de datos.",
           "Participé en el diseño de interfaces de usuario y en la integración entre las distintas partes de la aplicación."
+        ]
+      },
+      "bloody-halloween-cofounder": {
+        "company": "Bloody Halloween",
+        "period": "Jun 2018 - Nov 2018",
+        "highlights": [
+          "Cofundación de Bloody Halloween, una tienda online de temporada que vendía productos temáticos de Halloween en el mercado estadounidense.",
+          "Responsable de toda la parte técnica de la tienda, incluido el desarrollo en JavaScript y PHP sobre Shopify.",
+          "Combinación de experiencia en ventas, marketing en redes sociales y desarrollo dentro del equipo fundador.",
+          "Gestión de la tienda durante seis meses."
         ]
       },
       "selectos-web-intern": {

@@ -55,6 +55,7 @@
       "javaScript": "JavaScript ist eine Programmiersprache, mit der Webseiten interaktiv gestaltet und mit Node.js auch Code auf Servern ausgeführt wird.",
       "php": "PHP ist eine Programmiersprache, die vor allem zum Generieren von Webseiten und für die Serverseite von Websites verwendet wird.",
       "wordPress": "WordPress ist ein in PHP geschriebenes Content-Management-System, mit dem Websites erstellt und verwaltet werden, ohne jede Seite zu programmieren.",
+      "shopify": "Shopify ist eine E-Commerce-Plattform zum Erstellen und Betreiben von Onlineshops, die sich mit Themes und Apps erweitern lassen.",
       "dynamics365": "Microsoft Dynamics 365 ist eine Sammlung von Geschäftsanwendungen für Kunden-, Vertriebs- und Betriebsprozesse.",
       "powerPlatform": "Power Platform ist eine Low-Code-Plattform zum Erstellen von Anwendungen und Automatisieren von Abläufen.",
       "ionic": "Ionic ist ein JavaScript- und TypeScript-Werkzeugkasten zum Erstellen mobiler Anwendungen mit Webtechnologien.",
@@ -315,6 +316,16 @@
           "Arbeitete an einer Full-Stack-Anwendung zur Verwaltung von Raumreservierungen im öffentlichen Dienst.",
           "Wirkte am Angular-Frontend und Node.js-Backend mit, einschließlich Geschäftslogik und Datenbankinteraktionen.",
           "Beteiligte sich an der Gestaltung der Benutzeroberflächen und der Integration zwischen den verschiedenen Teilen der Anwendung."
+        ]
+      },
+      "bloody-halloween-cofounder": {
+        "company": "Bloody Halloween",
+        "period": "Jun 2018 - Nov 2018",
+        "highlights": [
+          "Mitgründung von Bloody Halloween, einem saisonalen Onlineshop für Halloween-Produkte auf dem US-Markt.",
+          "Verantwortung für alle technischen Aspekte des Shops, einschließlich JavaScript- und PHP-Entwicklung auf Shopify.",
+          "Bündelung von Kompetenzen in Vertrieb, Social-Media-Marketing und Entwicklung im Gründerteam.",
+          "Betrieb des Shops über sechs Monate."
         ]
       },
       "selectos-web-intern": {

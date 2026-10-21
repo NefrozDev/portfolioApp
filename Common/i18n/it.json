@@ -55,6 +55,7 @@
       "javaScript": "JavaScript è un linguaggio di programmazione usato per rendere interattive le pagine web e, con Node.js, eseguire codice sui server.",
       "php": "PHP è un linguaggio di programmazione usato principalmente per generare pagine web e far funzionare la parte server dei siti.",
       "wordPress": "WordPress è un sistema di gestione dei contenuti scritto in PHP, usato per creare e amministrare siti web senza programmare ogni pagina.",
+      "shopify": "Shopify è una piattaforma di e-commerce usata per creare e gestire negozi online, estendibili con temi e app.",
       "dynamics365": "Microsoft Dynamics 365 è una suite di applicazioni aziendali per clienti, vendite e processi operativi.",
       "powerPlatform": "Power Platform è una piattaforma low-code per creare applicazioni e automatizzare processi.",
       "ionic": "Ionic è una cassetta degli attrezzi JavaScript e TypeScript per creare applicazioni mobili con tecnologie web.",
@@ -315,6 +316,16 @@
           "Lavorato su un'applicazione full-stack per la gestione delle prenotazioni di sale nei servizi pubblici.",
           "Contribuito al front-end Angular e al backend Node.js, inclusi la logica di business e le interazioni con il database.",
           "Partecipato alla progettazione delle interfacce utente e all'integrazione tra le diverse parti dell'applicazione."
+        ]
+      },
+      "bloody-halloween-cofounder": {
+        "company": "Bloody Halloween",
+        "period": "Giu 2018 - Nov 2018",
+        "highlights": [
+          "Cofondazione di Bloody Halloween, un negozio online stagionale che vendeva prodotti a tema Halloween sul mercato statunitense.",
+          "Gestione di tutti gli aspetti tecnici del negozio, incluso lo sviluppo JavaScript e PHP su Shopify.",
+          "Unione di competenze in vendita, marketing sui social media e sviluppo all'interno del team fondatore.",
+          "Gestione del negozio per sei mesi."
         ]
       },
       "selectos-web-intern": {

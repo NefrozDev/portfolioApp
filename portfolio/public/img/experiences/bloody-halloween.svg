@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="14 22 228 228" role="img" aria-label="Bloody Halloween">
+  <path d="M120 78C119 58 125 40 141 30l10 9c-12 9-15 22-13 39Z" fill="#3f5f1b"/>
+  <ellipse cx="88" cy="152" rx="64" ry="80" fill="#d4560a"/>
+  <ellipse cx="168" cy="152" rx="64" ry="80" fill="#d4560a"/>
+  <ellipse cx="108" cy="150" rx="52" ry="86" fill="#e8690f"/>
+  <ellipse cx="148" cy="150" rx="52" ry="86" fill="#e8690f"/>
+  <ellipse cx="128" cy="150" rx="40" ry="88" fill="#f5821f"/>
+  <g fill="#2a0c04">
+    <path d="M68 118l46 18-34 18Z"/>
+    <path d="M188 118l-46 18 34 18Z"/>
+    <path d="M128 150l-10 18h20Z"/>
+    <path d="M62 170l20 12q46 22 92 0l20-12q-18 58-66 58t-66-58Z"/>
+  </g>
+  <g fill="#e8690f">
+    <path d="M96 188l18 6-10 14Z"/>
+    <path d="M160 188l-18 6 10 14Z"/>
+  </g>
+  <path d="M119 229l9-17 9 17Z" fill="#f5821f"/>
+  <path d="M124 228q4 10 0 18q-4-8 0-18Z" fill="#9b0f0f"/>
+</svg>
