@@ -19,6 +19,8 @@ RUN npm ci --omit=dev --ignore-scripts
 
 COPY --from=builder /app/Backend/dist ./dist
 
+USER node
+
 EXPOSE 3000
 
 CMD ["node", "dist/Backend/src/server.js"]
