@@ -7,7 +7,7 @@ COPY . .
 
 WORKDIR /app/Backend
 
-RUN npm ci
+RUN npm ci --ignore-scripts
 RUN npm run build
 
 FROM node:24-alpine
@@ -15,9 +15,11 @@ FROM node:24-alpine
 WORKDIR /app
 
 COPY --from=builder /app/Backend/package*.json ./
-RUN npm ci --omit=dev
+RUN npm ci --omit=dev --ignore-scripts
 
 COPY --from=builder /app/Backend/dist ./dist
+
+USER node
 
 EXPOSE 3000
 

@@ -5,7 +5,7 @@ WORKDIR /app
 
 COPY portfolio/package*.json portfolio/
 COPY Common/package.json Common/
-RUN npm ci --prefix portfolio
+RUN npm ci --prefix portfolio --ignore-scripts
 
 COPY Common Common
 COPY portfolio portfolio
@@ -14,9 +14,11 @@ COPY portfolio portfolio
 ARG BUILD_CONFIGURATION=production
 RUN npm --prefix portfolio run build -- --configuration ${BUILD_CONFIGURATION}
 
-FROM nginx:1.27-alpine
+FROM nginxinc/nginx-unprivileged:1.27-alpine
 
 COPY portfolio/nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder /app/portfolio/dist/portfolio/browser /usr/share/nginx/html
 
-EXPOSE 80
+USER nginx
+
+EXPOSE 8080

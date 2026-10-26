@@ -25,11 +25,13 @@
       </button>
     </header>
 
-    <iframe
-      class="recommendation-dialog__document"
-      [src]="safeLetterUrl()"
-      [title]="'experiences.recommendationLetterTitle' | translate"
-    ></iframe>
+    @if (safeLetterUrl(); as letterUrl) {
+      <iframe
+        class="recommendation-dialog__document"
+        [src]="letterUrl"
+        [title]="'experiences.recommendationLetterTitle' | translate"
+      ></iframe>
+    }
 
     <footer class="recommendation-dialog__footer">
       <a

@@ -13,7 +13,7 @@ const experience: Experience = {
   technologies: [{ name: 'Angular' }],
   highlights: [],
   isExpanded: true,
-  recommendationLetterUrl: 'data:application/pdf;base64,JVBERi0xLjQ='
+  recommendationLetterUrl: '/documents/recommendations/ic-green.pdf'
 };
 
 describe('RecommendationLetterDialog', () => {
@@ -38,6 +38,24 @@ describe('RecommendationLetterDialog', () => {
       experience.recommendationLetterUrl
     );
   });
+
+  for (const url of [
+    'https://example.com/documents/recommendations/letter.pdf',
+    'javascript:alert(1)',
+    'data:application/pdf;base64,JVBERi0xLjQ=',
+    '/documents/recommendations/../secret.pdf'
+  ]) {
+    it(`should not embed an untrusted letter URL: ${url}`, () => {
+      fixture.componentRef.setInput('experience', {
+        ...experience,
+        recommendationLetterUrl: url
+      });
+      fixture.detectChanges();
+
+      expect(fixture.componentInstance.safeLetterUrl()).toBeNull();
+      expect((fixture.nativeElement as HTMLElement).querySelector('iframe')).toBeNull();
+    });
+  }
 
   it('should open and close the native dialog', () => {
     const component = fixture.componentInstance;

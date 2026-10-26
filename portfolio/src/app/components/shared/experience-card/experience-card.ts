@@ -21,7 +21,7 @@ export class ExperienceCard {
   readonly glossaryInfoKey = getGlossaryInfoKey;
   readonly formatTechnologyTag = formatTechnologyTag;
   readonly experience = input.required<Experience>();
-  readonly toggle = output<string>();
+  readonly expandToggle = output<string>();
 
   onToggle(): void {
     const currentExperience = this.experience();
@@ -31,7 +31,7 @@ export class ExperienceCard {
       return;
     }
 
-    this.toggle.emit(currentExperience.id);
+    this.expandToggle.emit(currentExperience.id);
   }
 
   openRecommendationLetter(): void {

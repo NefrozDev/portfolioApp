@@ -98,7 +98,7 @@ describe('ExperienceCard', () => {
   });
 
   it('should open a recommendation letter in a dialog when configured', () => {
-    const recommendationLetterUrl = 'data:application/pdf;base64,JVBERi0xLjQ=';
+    const recommendationLetterUrl = '/documents/recommendations/ic-green.pdf';
 
     fixture.componentRef.setInput('experience', {
       ...experience,
@@ -127,7 +127,7 @@ describe('ExperienceCard', () => {
 
   it('should emit the experience id when toggled', () => {
     const toggledIds: string[] = [];
-    component.toggle.subscribe((id) => toggledIds.push(id));
+    component.expandToggle.subscribe((id) => toggledIds.push(id));
 
     component.onToggle();
 
@@ -137,7 +137,7 @@ describe('ExperienceCard', () => {
   it('should ignore a toggle when the experience id is missing', () => {
     spyOn(console, 'warn');
     const toggledIds: string[] = [];
-    component.toggle.subscribe((id) => toggledIds.push(id));
+    component.expandToggle.subscribe((id) => toggledIds.push(id));
     fixture.componentRef.setInput('experience', { ...experience, id: '' });
 
     component.onToggle();

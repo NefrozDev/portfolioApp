@@ -17,7 +17,8 @@ import {
   hashClientIp
 } from '../services/client-ip';
 
-const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+// Domain labels exclude dots so the pattern cannot backtrack.
+const emailPattern = /^[^\s@]+@[^\s@.]+(?:\.[^\s@.]+)+$/;
 
 function isSpamTrapFilled(payload: unknown): boolean {
   if (!payload || typeof payload !== 'object') {

@@ -21,12 +21,12 @@ jobs:
       # SHARED CONTRACTS
       - name: Install shared contracts deps
         working-directory: Common
-        run: npm ci
+        run: npm ci --ignore-scripts
 
       # FRONTEND
       - name: Install frontend deps
         working-directory: portfolio
-        run: npm ci
+        run: npm ci --ignore-scripts
 
       - name: Build frontend
         working-directory: portfolio
@@ -35,7 +35,7 @@ jobs:
       # BACKEND
       - name: Install backend deps
         working-directory: Backend
-        run: npm ci
+        run: npm ci --ignore-scripts
 
       - name: Build backend
         working-directory: Backend

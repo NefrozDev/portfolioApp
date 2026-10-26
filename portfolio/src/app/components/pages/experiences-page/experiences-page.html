@@ -41,7 +41,7 @@
                 [experience]="experience"
                 [style.--experience-entrance-delay]="entranceAnimationDelay(index, total)"
                 [style.--experience-entrance-duration]="entranceAnimationDuration(total)"
-                (toggle)="toggleExperience($event)"
+                (expandToggle)="toggleExperience($event)"
               ></app-experience-card>
             } @empty {
               <div class="experiences-page__empty glass-card">
