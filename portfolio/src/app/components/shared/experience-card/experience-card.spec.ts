@@ -98,7 +98,7 @@ describe('ExperienceCard', () => {
   });
 
   it('should open a recommendation letter in a dialog when configured', () => {
-    const recommendationLetterUrl = 'data:application/pdf;base64,JVBERi0xLjQ=';
+    const recommendationLetterUrl = '/documents/recommendations/ic-green.pdf';
 
     fixture.componentRef.setInput('experience', {
       ...experience,

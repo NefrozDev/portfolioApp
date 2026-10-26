@@ -11,6 +11,10 @@ import { TranslatePipe } from '@ngx-translate/core';
 
 import { Experience } from '@common/models/experience.model';
 
+// Only same-origin letters may be embedded, since the iframe bypasses
+// Angular's resource URL sanitization.
+const recommendationLetterPattern = /^\/documents\/recommendations\/[\w-]+\.pdf$/;
+
 @Component({
   selector: 'app-recommendation-letter-dialog',
   imports: [TranslatePipe],
@@ -26,7 +30,12 @@ export class RecommendationLetterDialog {
   readonly safeLetterUrl = computed(() => {
     const url = this.experience().recommendationLetterUrl;
 
-    return url ? this.sanitizer.bypassSecurityTrustResourceUrl(url) : null;
+    if (!url || !recommendationLetterPattern.test(url)) {
+      return null;
+    }
+
+    // Safe: the URL is restricted to same-origin PDFs above.
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url); // NOSONAR
   });
 
   open(): void {
