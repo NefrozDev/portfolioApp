@@ -100,6 +100,30 @@ test('POST /api/contact rejects malformed contact details', async () => {
   assert.equal(storageCalled, false);
 });
 
+test('POST /api/contact accepts email addresses with subdomains', async () => {
+  const response = await request(createTestApp()).post('/api/contact').send({
+    name: 'Test User',
+    email: 'first.last@mail.example.co.uk',
+    message: 'Hello from test.'
+  });
+
+  assert.equal(response.status, 200);
+});
+
+test('POST /api/contact rejects email addresses with empty domain labels', async () => {
+  const app = createTestApp();
+
+  for (const email of ['test@example..com', 'test@.example.com', 'test@example.']) {
+    const response = await request(app).post('/api/contact').send({
+      name: 'Test User',
+      email,
+      message: 'Hello from test.'
+    });
+
+    assert.equal(response.status, 400, email);
+  }
+});
+
 test('POST /api/contact remains successful when notification delivery fails', async () => {
   const originalError = console.error;
   console.error = () => {};
