@@ -185,6 +185,23 @@ describe('ContactPage', () => {
     });
   });
 
+  it('should give every form field an associated label', () => {
+    const host = fixture.nativeElement as HTMLElement;
+    const fields = Array.from(
+      host.querySelectorAll<HTMLInputElement | HTMLTextAreaElement>(
+        '.contact-page__form input, .contact-page__form textarea'
+      )
+    );
+
+    expect(fields.length).toBe(5);
+    fields.forEach((field) => {
+      expect(field.labels?.length).withContext(field.id).toBe(1);
+    });
+    expect(
+      fields.slice(0, 4).map((field) => field.labels?.[0].textContent?.trim())
+    ).toEqual(['Name', 'Email', 'Phone', 'Message']);
+  });
+
   it('should show invalid email feedback inside the email field', () => {
     component.emailControl?.setValue('not-an-email');
     component.emailControl?.markAsTouched();

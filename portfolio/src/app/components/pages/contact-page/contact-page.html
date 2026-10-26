@@ -16,7 +16,11 @@
         [formGroup]="contactForm"
         (ngSubmit)="onSubmit()"
       >
+        <label class="sr-only" for="contact-name">
+          {{ 'contact.form.name.placeholder' | translate }}
+        </label>
         <input
+          id="contact-name"
           class="contact-page__input form-control"
           [class.contact-page__field--invalid]="
             nameControl?.touched && nameControl?.hasError('required')
@@ -39,7 +43,11 @@
 
         <div class="contact-page__contact-row">
           <div class="contact-page__field">
+            <label class="sr-only" for="contact-email">
+              {{ 'contact.form.email.placeholder' | translate }}
+            </label>
             <input
+              id="contact-email"
               class="contact-page__input form-control"
               [class.contact-page__field--invalid]="
                 emailControl?.touched && emailControl?.hasError('email')
@@ -67,7 +75,11 @@
             }
           </div>
 
+          <label class="sr-only" for="contact-phone">
+            {{ 'contact.form.phone.placeholder' | translate }}
+          </label>
           <input
+            id="contact-phone"
             class="contact-page__input form-control"
             type="tel"
             formControlName="phone"
@@ -75,7 +87,11 @@
           />
         </div>
 
+        <label class="sr-only" for="contact-message">
+          {{ 'contact.form.message.placeholder' | translate }}
+        </label>
         <textarea
+          id="contact-message"
           class="contact-page__textarea form-control"
           [class.contact-page__field--invalid]="
             messageControl?.touched && messageControl?.hasError('required')
@@ -109,7 +125,9 @@
 
         <!-- Spam trap: hidden from people, often filled in by bots. -->
         <div class="contact-page__trap" aria-hidden="true">
+          <label for="contact-website">Website</label>
           <input
+            id="contact-website"
             type="text"
             formControlName="website"
             tabindex="-1"
