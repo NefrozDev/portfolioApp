@@ -5,7 +5,7 @@ WORKDIR /app
 
 COPY portfolio/package*.json portfolio/
 COPY Common/package.json Common/
-RUN npm ci --prefix portfolio
+RUN npm ci --prefix portfolio --ignore-scripts
 
 COPY Common Common
 COPY portfolio portfolio
