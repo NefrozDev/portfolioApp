@@ -1,4 +1,13 @@
-import { Component, computed, DestroyRef, inject, signal } from '@angular/core';
+import {
+  Component,
+  computed,
+  DestroyRef,
+  ElementRef,
+  HostListener,
+  inject,
+  signal,
+  viewChild
+} from '@angular/core';
 import { takeUntilDestroyed, toObservable } from '@angular/core/rxjs-interop';
 import { TranslatePipe } from '@ngx-translate/core';
 import { Subscription, distinctUntilChanged, filter, take } from 'rxjs';
@@ -33,6 +42,7 @@ export class ExperiencesPage {
   private static readonly ENTRANCE_DURATION_MS = 2000;
   private static readonly CARD_SETTLE_DURATION_MS = 600;
   private static readonly FIRST_EXPERIENCE_OPEN_DELAY_MS = 1000;
+  private static readonly WHEEL_LINE_HEIGHT_PX = 16;
 
   readonly appState = inject(AppStateService);
   private readonly pageSwipe = inject(PageSwipeService);
@@ -41,6 +51,7 @@ export class ExperiencesPage {
     take(1)
   );
   private swipeWait: Subscription | undefined;
+  private readonly experienceList = viewChild<ElementRef<HTMLElement>>('experienceList');
   readonly experiences = signal<Experience[]>([]);
   readonly isLoading = signal<boolean>(true);
   readonly loadError = signal<string | null>(null);
@@ -143,6 +154,28 @@ export class ExperiencesPage {
       : ExperiencesPage.CARD_SETTLE_DURATION_MS;
 
     return `${duration}ms`;
+  }
+
+  // On desktop the page has a fixed height and only the list scrolls, so a
+  // wheel over the hero, filters or margins is routed to the list. Wheels the
+  // list or a nested scroller (e.g. the filter rail) already handle are left alone.
+  @HostListener('wheel', ['$event'])
+  onPageWheel(event: WheelEvent): void {
+    const list = this.experienceList()?.nativeElement;
+
+    if (
+      !list ||
+      event.defaultPrevented ||
+      event.ctrlKey ||
+      Math.abs(event.deltaY) <= Math.abs(event.deltaX) ||
+      (event.target instanceof Node && list.contains(event.target)) ||
+      list.scrollHeight <= list.clientHeight
+    ) {
+      return;
+    }
+
+    event.preventDefault();
+    list.scrollBy({ top: this.wheelDeltaInPixels(event, list) });
   }
 
   toggleExperience(experienceId: string): void {
@@ -259,6 +292,17 @@ export class ExperiencesPage {
         index === 0 ? { ...item, isExpanded: true } : item
       )
     );
+  }
+
+  private wheelDeltaInPixels(event: WheelEvent, list: HTMLElement): number {
+    switch (event.deltaMode) {
+      case WheelEvent.DOM_DELTA_LINE:
+        return event.deltaY * ExperiencesPage.WHEEL_LINE_HEIGHT_PX;
+      case WheelEvent.DOM_DELTA_PAGE:
+        return event.deltaY * list.clientHeight;
+      default:
+        return event.deltaY;
+    }
   }
 
   private prefersReducedMotion(): boolean {

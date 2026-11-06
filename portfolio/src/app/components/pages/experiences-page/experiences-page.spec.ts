@@ -164,6 +164,80 @@ describe('ExperiencesPage', () => {
 
     expect(terms.some((term) => term?.includes('Docker'))).toBeTrue();
   });
+
+  describe('wheel scrolling outside the list', () => {
+    let host: HTMLElement;
+    let list: HTMLElement;
+    let hero: HTMLElement;
+    let scrollBy: jasmine.Spy;
+
+    const setListSize = (scrollHeight: number, clientHeight: number): void => {
+      Object.defineProperty(list, 'scrollHeight', { configurable: true, value: scrollHeight });
+      Object.defineProperty(list, 'clientHeight', { configurable: true, value: clientHeight });
+    };
+
+    const wheel = (target: HTMLElement, init: WheelEventInit): WheelEvent => {
+      const event = new WheelEvent('wheel', { bubbles: true, cancelable: true, ...init });
+      target.dispatchEvent(event);
+      return event;
+    };
+
+    beforeEach(() => {
+      host = fixture.nativeElement as HTMLElement;
+      list = host.querySelector('.experiences-page__list') as HTMLElement;
+      hero = host.querySelector('app-section-hero') as HTMLElement;
+      scrollBy = spyOn(list, 'scrollBy');
+      setListSize(1000, 300);
+    });
+
+    it('should scroll the list by the pixel delta and cancel the native scroll', () => {
+      const event = wheel(hero, { deltaY: 120 });
+
+      expect(scrollBy).toHaveBeenCalledOnceWith({ top: 120 });
+      expect(event.defaultPrevented).toBeTrue();
+    });
+
+    it('should convert line and page wheel deltas to pixels', () => {
+      wheel(hero, { deltaY: 3, deltaMode: WheelEvent.DOM_DELTA_LINE });
+      wheel(hero, { deltaY: -1, deltaMode: WheelEvent.DOM_DELTA_PAGE });
+
+      expect(scrollBy.calls.allArgs()).toEqual([[{ top: 48 }], [{ top: -300 }]]);
+    });
+
+    it('should leave wheels inside the list to native scrolling', () => {
+      const card = list.querySelector('app-experience-card') as HTMLElement;
+      const event = wheel(card, { deltaY: 120 });
+
+      expect(scrollBy).not.toHaveBeenCalled();
+      expect(event.defaultPrevented).toBeFalse();
+    });
+
+    it('should do nothing when the list cannot scroll, as in the mobile layout', () => {
+      setListSize(300, 300);
+
+      const event = wheel(hero, { deltaY: 120 });
+
+      expect(scrollBy).not.toHaveBeenCalled();
+      expect(event.defaultPrevented).toBeFalse();
+    });
+
+    it('should ignore horizontal gestures and ctrl + wheel zooming', () => {
+      const horizontal = wheel(hero, { deltaX: 80, deltaY: 10 });
+      const zoom = wheel(hero, { deltaY: 120, ctrlKey: true });
+
+      expect(scrollBy).not.toHaveBeenCalled();
+      expect(horizontal.defaultPrevented).toBeFalse();
+      expect(zoom.defaultPrevented).toBeFalse();
+    });
+
+    it('should not take over wheels already handled by a nested scroller', () => {
+      hero.addEventListener('wheel', (event) => event.preventDefault(), { once: true });
+
+      wheel(hero, { deltaY: 120 });
+
+      expect(scrollBy).not.toHaveBeenCalled();
+    });
+  });
 });
 
 describe('ExperiencesPage during a page swipe', () => {
