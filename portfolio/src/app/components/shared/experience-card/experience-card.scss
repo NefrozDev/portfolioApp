@@ -155,7 +155,9 @@
   min-width: max-content;
   gap: 0.45rem;
   padding-inline: 1rem;
-  color: var(--text-secondary);
+  color: #f1f5f9;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.24);
   font-size: 0.875rem;
   font-weight: 600;
 }
