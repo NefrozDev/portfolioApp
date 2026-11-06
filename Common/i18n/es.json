@@ -247,7 +247,7 @@
         "highlights": [
           "Fundé Synapse Engineering, mi empresa freelance de consultoría de software full-stack, con la que diseñé, desarrollé y desplegué yo solo cuatro productos en octubre de 2026, todos en producción.",
           "Semver Sage: un asistente de IA (RAG) que responde preguntas sobre frameworks de JavaScript para la versión exacta que se usa, con fuentes citadas, para evitar alucinaciones de versión.",
-          "synapseengineering.dev: este sitio profesional, que también genera automáticamente mi CV en seis idiomas.",
+          "synapseengineering.dev: mi sitio profesional, que también genera automáticamente mi CV en seis idiomas.",
           "Plano: una aplicación de planificación mobile-first, cuyo siguiente paso es conectarla a calendarios y otras herramientas mediante MCP.",
           "Un servidor de correo autoalojado que gestiona todo el correo de la empresa sin proveedor externo.",
           "Las tres bases de código superan su quality gate de SonarQube con calificación A en seguridad, fiabilidad y mantenibilidad."
