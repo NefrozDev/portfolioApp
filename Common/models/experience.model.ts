@@ -27,6 +27,8 @@ export interface Experience {
   technologies: TechnologyTag[];
   isExpanded: boolean;
   logoUrl?: string;
+  // Logos drawn for dark backgrounds sit on the site background instead of the white tile.
+  logoTheme?: 'dark';
   recommendationLetterUrl?: string;
   // Public external profile backing the experience, e.g. a coding platform account.
   profileUrl?: string;

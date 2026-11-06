@@ -18,6 +18,13 @@ test('CV categories follow lifecycle order and preserve every current skill and 
   assert.ok(groups[0].technologies.some((skill) => skill.name === 'Jira'));
   assert.ok(groups[0].technologies.some((skill) => skill.name === 'ServiceNow'));
   assert.ok(groups[0].technologies.some((skill) => skill.name === 'Mentoring'));
+
+  const namesIn = (id: string) =>
+    groups.find((group) => group.id === id)?.technologies.map((skill) => skill.name) ?? [];
+  assert.ok(namesIn('data').includes('PostgreSQL'));
+  assert.ok(namesIn('backend').includes('NestJS'));
+  assert.ok(namesIn('integration').includes('RAG'));
+  assert.ok(namesIn('quality').includes('Playwright'));
 });
 
 test('CV includes repository tools after architecture without duplicating position skills', () => {

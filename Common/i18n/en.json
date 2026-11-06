@@ -35,6 +35,10 @@
       "ros": "ROS is a set of software tools for connecting a robot's software and hardware components.",
       "mqtt": "MQTT is a messaging protocol that uses little bandwidth and few device resources, making it suited to connected devices and constrained networks.",
       "ai": "AI is a field of technology that enables software to recognize patterns, interpret information and perform tasks.",
+      "nestJs": "NestJS is a TypeScript framework for building server-side applications and APIs on Node.js.",
+      "postgreSql": "PostgreSQL is a relational database system that stores data in tables and queries it with SQL.",
+      "rag": "RAG (retrieval-augmented generation) is an AI technique that retrieves relevant documents before generating an answer, so the answer is based on those sources.",
+      "playwright": "Playwright is a testing tool that automates web browsers to run end-to-end tests of web applications, mainly from JavaScript and TypeScript.",
       "gerrit": "Gerrit is a source code review and repository management tool for Git that adds an approval workflow before changes are merged.",
       "i18n": "Short for internationalisation, a software development practice that prepares applications for multiple languages and regional formats without changing their source code.",
       "jasmine": "Jasmine is a JavaScript testing framework used to write and organize unit tests with assertions, test suites and test doubles.",
@@ -235,6 +239,18 @@
       }
     },
     "experiences": {
+      "synapse-engineering-founder": {
+        "company": "Synapse Engineering",
+        "period": "Oct 2026 - Present",
+        "highlights": [
+          "Founded Synapse Engineering, my freelance company for full-stack software consulting, and used it in October 2026 to design, build and deploy four products on my own, all running live.",
+          "Semver Sage: an AI assistant (RAG) that answers questions about JavaScript frameworks for the exact version in use, with cited sources, to avoid version hallucinations.",
+          "synapseengineering.dev: this professional site, which also generates my CV automatically in six languages.",
+          "Plano: a mobile-first planning app, with calendar and tool integrations through MCP as the next step.",
+          "A self-hosted mail server that handles all of the company's email without a third-party provider.",
+          "All three codebases pass their SonarQube quality gate with A ratings for security, reliability and maintainability."
+        ]
+      },
       "icgreen-lead-dev": {
         "company": "IC-Green",
         "period": "May 2025 - Aug 2026",

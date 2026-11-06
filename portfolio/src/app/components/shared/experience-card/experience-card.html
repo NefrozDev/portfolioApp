@@ -4,7 +4,10 @@
 >
   <div class="experience-card__header">
     <div class="experience-card__identity">
-      <div class="experience-card__logo">
+      <div
+        class="experience-card__logo"
+        [class.experience-card__logo--dark]="experience().logoTheme === 'dark'"
+      >
         @if (experience().logoUrl) {
           <img
             [src]="experience().logoUrl"

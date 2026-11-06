@@ -28,7 +28,8 @@ test('GET /api/experiences should return an experience list', async () => {
   );
   assert.ok(Array.isArray(firstExperience.highlights));
   assert.equal(
-    firstExperience.recommendationLetterUrl,
+    response.body.find((experience: { id: string }) => experience.id === 'icgreen-lead-dev')
+      .recommendationLetterUrl,
     '/documents/recommendations/ic-green.pdf'
   );
   assert.ok(
@@ -77,6 +78,7 @@ test('GET /api/experiences should include position statuses and the Akkodis Site
       .filter(
         (experience: { id: string }) =>
           ![
+            'synapse-engineering-founder',
             'akkodis-pg-site-leader',
             'akkodis-javascript-mentor',
             'icgreen-lead-dev',
@@ -88,6 +90,39 @@ test('GET /api/experiences should include position statuses and the Akkodis Site
       )
       .every((experience: { status: string }) => experience.status === 'employee')
   );
+});
+
+test('GET /api/experiences should list the Synapse Engineering founder role first, before IC-Green', async () => {
+  const response = await request(app).get('/api/experiences?lang=fr');
+  const [synapseExperience, icGreenExperience] = response.body;
+
+  assert.equal(response.status, 200);
+  assert.equal(synapseExperience.id, 'synapse-engineering-founder');
+  assert.equal(icGreenExperience.id, 'icgreen-lead-dev');
+  assert.equal(synapseExperience.company, 'Synapse Engineering');
+  assert.equal(synapseExperience.role, 'Founder & Full-Stack Developer');
+  assert.equal(synapseExperience.status, 'freelance');
+  assert.equal(synapseExperience.period, "Oct 2026 - Aujourd'hui");
+  assert.equal(synapseExperience.logoUrl, '/img/experiences/synapse-engineering.png');
+  assert.equal(synapseExperience.logoTheme, 'dark');
+  assert.equal(icGreenExperience.logoTheme, undefined);
+  assert.deepEqual(
+    synapseExperience.technologies.find((technology: { name: string }) => technology.name === 'Angular'),
+    { name: 'Angular', version: '22' }
+  );
+  for (const name of ['NestJS', 'PostgreSQL', 'RAG', 'Playwright', 'SonarQube']) {
+    assert.ok(
+      synapseExperience.technologies.some((technology: { name: string }) => technology.name === name),
+      `missing ${name}`
+    );
+  }
+  assert.equal(synapseExperience.highlights.length, 6);
+  assert.match(synapseExperience.highlights[1], /^Semver Sage/);
+  assert.match(synapseExperience.highlights[2], /six langues/);
+  assert.match(synapseExperience.highlights[3], /^Plano.*MCP/);
+  assert.match(synapseExperience.highlights[5], /SonarQube/);
+  assert.equal(synapseExperience.recommendationLetterUrl, undefined);
+  assert.equal(synapseExperience.profileUrl, undefined);
 });
 
 test('GET /api/experiences should list the Akkodis JavaScript mentor role right after Site Leader', async () => {
@@ -204,9 +239,12 @@ test('GET /api/experiences should list the Selectos and Bluefeet internships las
 
 test('GET /api/experiences should keep role titles language-neutral', async () => {
   const response = await request(app).get('/api/experiences?lang=de');
+  const roleOf = (id: string) =>
+    response.body.find((experience: { id: string }) => experience.id === id).role;
 
   assert.equal(response.status, 200);
-  assert.equal(response.body[0].role, 'Lead Developer');
+  assert.equal(roleOf('synapse-engineering-founder'), 'Founder & Full-Stack Developer');
+  assert.equal(roleOf('icgreen-lead-dev'), 'Lead Developer');
 });
 
 test('GET /api/experiences should describe Site Leader as an additional parallel role in every language', async () => {
@@ -364,7 +402,7 @@ test('GET /api/experiences should include Jasmine and Karma on Angular roles fro
   assert.deepEqual(testingTechnologyIds, expectedIds);
 });
 
-test('GET /api/experiences should include Monorepo on IC-Green and Innovation only', async () => {
+test('GET /api/experiences should include Monorepo on Synapse Engineering, IC-Green and Innovation only', async () => {
   const response = await request(app).get('/api/experiences');
   const monorepoExperienceIds = response.body
     .filter(
@@ -374,6 +412,7 @@ test('GET /api/experiences should include Monorepo on IC-Green and Innovation on
     .map((experience: { id: string }) => experience.id);
 
   assert.deepEqual(monorepoExperienceIds, [
+    'synapse-engineering-founder',
     'icgreen-lead-dev',
     'akkodis-internal-project'
   ]);

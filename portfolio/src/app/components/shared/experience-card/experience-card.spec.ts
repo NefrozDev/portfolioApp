@@ -125,6 +125,30 @@ describe('ExperienceCard', () => {
     expect(dialog.querySelector('iframe')?.getAttribute('src')).toBe(recommendationLetterUrl);
   });
 
+  it('should keep the default white logo tile when no logo theme is set', () => {
+    const logo = fixture.nativeElement.querySelector('.experience-card__logo') as HTMLElement;
+
+    expect(logo.classList).not.toContain('experience-card__logo--dark');
+    expect(getComputedStyle(logo).backgroundColor).toBe('rgb(255, 255, 255)');
+  });
+
+  it('should put dark-themed logos on the site background', () => {
+    fixture.componentRef.setInput('experience', {
+      ...experience,
+      logoUrl: '/img/experiences/synapse-engineering.png',
+      logoTheme: 'dark'
+    });
+    fixture.detectChanges();
+
+    const logo = fixture.nativeElement.querySelector('.experience-card__logo') as HTMLElement;
+
+    expect(logo.classList).toContain('experience-card__logo--dark');
+    expect(getComputedStyle(logo).backgroundImage).toContain('linear-gradient');
+    expect(logo.querySelector('img')?.getAttribute('src')).toBe(
+      '/img/experiences/synapse-engineering.png'
+    );
+  });
+
   it('should hide the profile link when no profile is configured', () => {
     expect(fixture.nativeElement.querySelector('.experience-card__profile')).toBeNull();
   });

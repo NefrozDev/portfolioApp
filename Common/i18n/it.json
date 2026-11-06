@@ -35,6 +35,10 @@
       "ros": "ROS è un insieme di strumenti software per collegare i componenti software e hardware di un robot.",
       "mqtt": "MQTT è un protocollo di messaggistica che usa poca larghezza di banda e poche risorse del dispositivo, quindi è adatto a dispositivi connessi e reti limitate.",
       "ai": "L’IA è un campo dell’informatica che permette al software di riconoscere schemi, interpretare informazioni ed eseguire attività.",
+      "nestJs": "NestJS è una cassetta degli attrezzi TypeScript per creare applicazioni server e API su Node.js.",
+      "postgreSql": "PostgreSQL è un sistema di database relazionale che archivia i dati in tabelle e li interroga con SQL.",
+      "rag": "La RAG (retrieval-augmented generation) è una tecnica di IA che recupera documenti pertinenti prima di generare una risposta, in modo che questa si basi su quelle fonti.",
+      "playwright": "Playwright è uno strumento di test che automatizza i browser web per eseguire test end-to-end di applicazioni web, principalmente da JavaScript e TypeScript.",
       "gerrit": "Gerrit è uno strumento di revisione del codice e gestione dei repository Git che aggiunge un processo di approvazione prima dell’integrazione delle modifiche.",
       "i18n": "Abbreviazione di internazionalizzazione, una pratica di sviluppo software che prepara le applicazioni per più lingue e formati regionali senza modificarne il codice sorgente.",
       "jasmine": "Jasmine è una cassetta degli attrezzi per i test JavaScript usata per scrivere e organizzare test unitari con asserzioni, suite di test e test double.",
@@ -235,6 +239,18 @@
       }
     },
     "experiences": {
+      "synapse-engineering-founder": {
+        "company": "Synapse Engineering",
+        "period": "Ott 2026 - Oggi",
+        "highlights": [
+          "Fondato Synapse Engineering, la mia società freelance di consulenza software full-stack, con cui ho progettato, sviluppato e distribuito da solo quattro prodotti a ottobre 2026, tutti in produzione.",
+          "Semver Sage: un assistente IA (RAG) che risponde a domande sui framework JavaScript per la versione esatta in uso, con fonti citate, per evitare allucinazioni di versione.",
+          "synapseengineering.dev: questo sito professionale, che genera anche automaticamente il mio CV in sei lingue.",
+          "Plano: un'app di pianificazione mobile-first, il cui prossimo passo è il collegamento a calendari e altri strumenti tramite MCP.",
+          "Un server di posta self-hosted che gestisce tutte le email della società senza un provider esterno.",
+          "Le tre codebase superano il quality gate di SonarQube con valutazione A in sicurezza, affidabilità e manutenibilità."
+        ]
+      },
       "icgreen-lead-dev": {
         "company": "IC-Green",
         "period": "Mag 2025 - Ago 2026",

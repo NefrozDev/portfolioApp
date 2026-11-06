@@ -8,12 +8,12 @@ const SKILL_CATEGORIES: Array<{ id: CategoryId; names: string[] }> = [
   { id: 'planning', names: ['Consulting', 'Leadership', 'Team Leading', 'Mentoring','Project Management', 'Jira', 'ServiceNow', 'Phabricator'] },
   { id: 'architecture', names: ['Monorepo', 'Nx', 'Feature-based'] },
   { id: 'versionControl', names: ['GitHub', 'GitLab', 'GitKraken', 'Bitbucket'] },
-  { id: 'data', names: ['SQL', 'SQL Server', 'NoSQL', 'Data Processing'] },
-  { id: 'backend', names: ['C#', '.NET', 'Python', 'PHP', 'Node.js', 'Express', 'FastAPI', 'REST API', 'WinDev'] },
+  { id: 'data', names: ['SQL', 'SQL Server', 'PostgreSQL', 'NoSQL', 'Data Processing'] },
+  { id: 'backend', names: ['C#', '.NET', 'Python', 'PHP', 'Node.js', 'Express', 'NestJS', 'FastAPI', 'REST API', 'WinDev'] },
   { id: 'frontend', names: ['TypeScript', 'JavaScript', 'Angular', 'HTML', 'CSS', 'SCSS', 'Ionic', 'RxJS', 'NgRx', 'i18n', 'WordPress'] },
   { id: 'business', names: ['Microsoft Dynamics 365', 'Power Platform', 'Shopify', 'Automation'] },
-  { id: 'integration', names: ['AI', 'ROS / ROS2', 'MQTT'] },
-  { id: 'quality', names: ['Jasmine', 'Karma', 'Vitest', 'JSDOM', 'SonarQube', 'Gerrit'] },
+  { id: 'integration', names: ['AI', 'RAG', 'ROS / ROS2', 'MQTT'] },
+  { id: 'quality', names: ['Jasmine', 'Karma', 'Vitest', 'JSDOM', 'Playwright', 'SonarQube', 'Gerrit'] },
   { id: 'delivery', names: ['Azure DevOps', 'Jenkins', 'Docker'] },
   { id: 'infrastructure', names: ['Linux', 'Windows', 'Access Control', 'Server Hardening', 'OWASP'] }
 ];

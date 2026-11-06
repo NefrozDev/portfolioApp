@@ -35,6 +35,10 @@
       "ros": "ROS est un ensemble d’outils logiciels pour connecter les composants logiciels et matériels d’un robot.",
       "mqtt": "MQTT est un protocole de messagerie qui utilise peu de bande passante et de ressources, ce qui le rend adapté aux appareils connectés et aux réseaux limités.",
       "ai": "L’IA est un domaine informatique qui permet aux logiciels de reconnaître des modèles, d’interpréter des informations et d’effectuer des tâches.",
+      "nestJs": "NestJS est une boîte à outils TypeScript pour créer des applications serveur et des API sur Node.js.",
+      "postgreSql": "PostgreSQL est un système de base de données relationnelle qui stocke les données dans des tables et les interroge avec SQL.",
+      "rag": "Le RAG (retrieval-augmented generation) est une technique d'IA qui recherche des documents pertinents avant de générer une réponse, afin que celle-ci s'appuie sur ces sources.",
+      "playwright": "Playwright est un outil de test qui automatise des navigateurs web pour exécuter des tests end-to-end d'applications web, principalement en JavaScript et TypeScript.",
       "gerrit": "Gerrit est un outil de revue du code source et de gestion des dépôts Git qui ajoute un processus d’approbation avant l’intégration des modifications.",
       "i18n": "Abréviation d’internationalisation, une pratique de développement logiciel qui prépare les applications à plusieurs langues et formats régionaux sans modifier leur code source.",
       "jasmine": "Jasmine est une boîte à outils de test JavaScript utilisée pour écrire et organiser des tests unitaires avec des assertions, des suites de tests et des objets simulés.",
@@ -235,6 +239,18 @@
       }
     },
     "experiences": {
+      "synapse-engineering-founder": {
+        "company": "Synapse Engineering",
+        "period": "Oct 2026 - Aujourd'hui",
+        "highlights": [
+          "Création de Synapse Engineering, ma société freelance de conseil en développement logiciel full-stack, avec laquelle j'ai conçu, développé et déployé seul quatre produits en octobre 2026, tous en production.",
+          "Semver Sage : un assistant IA (RAG) qui répond aux questions sur les frameworks JavaScript pour la version exacte utilisée, avec des sources citées, afin d'éviter les hallucinations de version.",
+          "synapseengineering.dev : ce site professionnel, qui génère aussi automatiquement mon CV en six langues.",
+          "Plano : une application de planification mobile-first, dont la prochaine étape est la connexion aux agendas et à d'autres outils via MCP.",
+          "Un serveur mail auto-hébergé qui gère tous les e-mails de la société sans fournisseur tiers.",
+          "Les trois bases de code passent leur quality gate SonarQube avec la note A en sécurité, fiabilité et maintenabilité."
+        ]
+      },
       "icgreen-lead-dev": {
         "company": "IC-Green",
         "period": "Mai 2025 - Août 2026",

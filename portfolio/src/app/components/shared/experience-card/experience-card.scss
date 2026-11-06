@@ -90,6 +90,11 @@
   overflow: hidden;
 }
 
+.experience-card__logo--dark {
+  background: linear-gradient(243deg, var(--app-bg-start) 0%, var(--app-bg-end) 100%);
+  border-color: var(--border-soft);
+}
+
 .experience-card__logo img {
   width: 100%;
   height: 100%;

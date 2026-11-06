@@ -101,10 +101,38 @@ const EXPERIENCE_METADATA: Array<
     | 'technologies'
     | 'isExpanded'
     | 'logoUrl'
+    | 'logoTheme'
     | 'recommendationLetterUrl'
     | 'profileUrl'
   >
 > = [
+  {
+    id: 'synapse-engineering-founder',
+    role: 'Founder & Full-Stack Developer',
+    status: 'freelance',
+    logoUrl: '/img/experiences/synapse-engineering.png',
+    logoTheme: 'dark',
+    technologies: [
+      { name: 'Angular', version: '22' },
+      { name: 'HTML', version: '5' },
+      { name: 'CSS', version: '3' },
+      { name: 'TypeScript' },
+      { name: 'NestJS' },
+      { name: 'Node.js' },
+      { name: 'Express' },
+      { name: 'PostgreSQL' },
+      { name: 'AI' },
+      { name: 'RAG' },
+      { name: 'Nx' },
+      { name: 'Monorepo' },
+      { name: 'Vitest' },
+      { name: 'Playwright' },
+      { name: 'SonarQube' },
+      { name: 'Docker' },
+      { name: 'Linux' }
+    ],
+    isExpanded: false
+  },
   {
     id: 'icgreen-lead-dev',
     role: 'Lead Developer',

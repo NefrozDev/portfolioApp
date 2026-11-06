@@ -35,6 +35,10 @@
       "ros": "ROS is een verzameling softwaretools om de software- en hardwareonderdelen van een robot te verbinden.",
       "mqtt": "MQTT is een berichtenprotocol dat weinig bandbreedte en apparaatbronnen gebruikt, waardoor het geschikt is voor verbonden apparaten en beperkte netwerken.",
       "ai": "AI is een vakgebied binnen de informatica waarmee software patronen kan herkennen, informatie kan interpreteren en taken kan uitvoeren.",
+      "nestJs": "NestJS is een TypeScript-gereedschapskist voor het bouwen van serverapplicaties en API's op Node.js.",
+      "postgreSql": "PostgreSQL is een relationeel databasesysteem dat gegevens in tabellen opslaat en met SQL opvraagt.",
+      "rag": "RAG (retrieval-augmented generation) is een AI-techniek die eerst relevante documenten opzoekt en daarna een antwoord genereert dat op die bronnen gebaseerd is.",
+      "playwright": "Playwright is een testtool die webbrowsers automatiseert om end-to-end-tests van webapplicaties uit te voeren, voornamelijk vanuit JavaScript en TypeScript.",
       "gerrit": "Gerrit is een hulpmiddel voor codereview en het beheer van Git-repository's dat een goedkeuringsproces toevoegt voordat wijzigingen worden samengevoegd.",
       "i18n": "Afkorting van internationalisering, een softwareontwikkelingspraktijk die applicaties voorbereidt op meerdere talen en regionale formaten zonder de broncode te wijzigen.",
       "jasmine": "Jasmine is een JavaScript-gereedschapskist voor het schrijven en organiseren van unittests met assertions, testsuites en testdubbels.",
@@ -235,6 +239,18 @@
       }
     },
     "experiences": {
+      "synapse-engineering-founder": {
+        "company": "Synapse Engineering",
+        "period": "Okt 2026 - Heden",
+        "highlights": [
+          "Richtte Synapse Engineering op, mijn freelancebedrijf voor full-stack softwareconsultancy, en ontwierp, bouwde en deployde daarmee in oktober 2026 in mijn eentje vier producten die allemaal live draaien.",
+          "Semver Sage: een AI-assistent (RAG) die vragen over JavaScript-frameworks beantwoordt voor de exacte versie die je gebruikt, met bronvermelding, om versiehallucinaties te vermijden.",
+          "synapseengineering.dev: deze professionele website, die ook automatisch mijn cv in zes talen genereert.",
+          "Plano: een mobile-first planningsapp, met als volgende stap de koppeling met agenda's en andere tools via MCP.",
+          "Een self-hosted mailserver die alle e-mail van het bedrijf afhandelt zonder externe provider.",
+          "De drie codebases halen hun SonarQube quality gate met een A-score voor security, betrouwbaarheid en onderhoudbaarheid."
+        ]
+      },
       "icgreen-lead-dev": {
         "company": "IC-Green",
         "period": "Mei 2025 - Aug 2026",
