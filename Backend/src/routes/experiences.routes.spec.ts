@@ -120,7 +120,7 @@ test('GET /api/experiences should list the Synapse Engineering founder role firs
   assert.match(synapseExperience.highlights[1], /^Semver Sage/);
   assert.match(synapseExperience.highlights[2], /six langues/);
   assert.match(synapseExperience.highlights[3], /^Plano.*MCP/);
-  assert.match(synapseExperience.highlights[5], /SonarQube/);
+  assert.match(synapseExperience.highlights[5], /CI\/CD sur GitHub Actions.*Vercel pour mon site.*SonarQube/);
   assert.equal(synapseExperience.recommendationLetterUrl, undefined);
   assert.equal(synapseExperience.profileUrl, undefined);
 });

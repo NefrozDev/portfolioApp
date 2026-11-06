@@ -250,7 +250,7 @@
           "synapseengineering.dev : mon site professionnel, qui génère aussi automatiquement mon CV en six langues.",
           "Plano : une application de planification mobile-first, dont la prochaine étape est la connexion aux agendas et à d'autres outils via MCP.",
           "Un serveur mail auto-hébergé qui gère tous les e-mails de la société sans fournisseur tiers.",
-          "Les trois bases de code passent leur quality gate SonarQube avec la note A en sécurité, fiabilité et maintenabilité."
+          "Les trois bases de code sont vérifiées par des pipelines CI/CD sur GitHub Actions, avec un déploiement via Vercel pour mon site, et valident leur quality gate SonarQube avec la note A en sécurité, fiabilité et maintenabilité."
         ]
       },
       "icgreen-lead-dev": {

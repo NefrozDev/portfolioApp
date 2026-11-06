@@ -250,7 +250,7 @@
           "synapseengineering.dev: mijn professionele website, die ook automatisch mijn cv in zes talen genereert.",
           "Plano: een mobile-first planningsapp, met als volgende stap de koppeling met agenda's en andere tools via MCP.",
           "Een self-hosted mailserver die alle e-mail van het bedrijf afhandelt zonder externe provider.",
-          "De drie codebases halen hun SonarQube quality gate met een A-score voor security, betrouwbaarheid en onderhoudbaarheid."
+          "De drie codebases doorlopen CI/CD-pipelines op GitHub Actions, met deployment via Vercel voor mijn website, en halen hun SonarQube quality gate met een A-score voor security, betrouwbaarheid en onderhoudbaarheid."
         ]
       },
       "icgreen-lead-dev": {
