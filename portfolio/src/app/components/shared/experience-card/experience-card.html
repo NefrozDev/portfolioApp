@@ -34,6 +34,28 @@
     </div>
 
     <div class="experience-card__actions">
+      @if (experience().profileUrl; as profileUrl) {
+        <a
+          class="experience-card__profile"
+          [href]="profileUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          [attr.aria-label]="'experiences.viewProfile' | translate: { company: experience().company }"
+          [attr.title]="'experiences.viewProfile' | translate: { company: experience().company }"
+        >
+          <svg
+            class="experience-card__recommendation-icon"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path d="M14 4h6v6" />
+            <path d="M20 4 10 14" />
+            <path d="M18 14v4.25A1.75 1.75 0 0 1 16.25 20H5.75A1.75 1.75 0 0 1 4 18.25V7.75A1.75 1.75 0 0 1 5.75 6H10" />
+          </svg>
+          {{ 'experiences.profileTitle' | translate }}
+        </a>
+      }
+
       @if (experience().recommendationLetterUrl) {
         <button
           type="button"

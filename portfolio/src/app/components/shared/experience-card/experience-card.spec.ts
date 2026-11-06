@@ -125,6 +125,34 @@ describe('ExperienceCard', () => {
     expect(dialog.querySelector('iframe')?.getAttribute('src')).toBe(recommendationLetterUrl);
   });
 
+  it('should hide the profile link when no profile is configured', () => {
+    expect(fixture.nativeElement.querySelector('.experience-card__profile')).toBeNull();
+  });
+
+  it('should link the external profile in a new tab when configured', () => {
+    const profileUrl = 'https://www.codewars.com/users/Nefroz';
+
+    fixture.componentRef.setInput('experience', { ...experience, profileUrl });
+    fixture.detectChanges();
+
+    const links = fixture.nativeElement.querySelectorAll(
+      '.experience-card__profile'
+    ) as NodeListOf<HTMLAnchorElement>;
+    const link = links[0];
+
+    expect(links).toHaveSize(1);
+    expect(link.getAttribute('href')).toBe(profileUrl);
+    expect(link.getAttribute('target')).toBe('_blank');
+    expect(link.getAttribute('rel')).toBe('noopener noreferrer');
+    expect(link.getAttribute('aria-label')).toBe('View Company profile');
+    expect(link.getAttribute('title')).toBe('View Company profile');
+    expect(link.textContent?.trim()).toBe('Profile');
+    expect(
+      link.querySelector('.experience-card__recommendation-icon')?.getAttribute('aria-hidden')
+    ).toBe('true');
+    expect(fixture.nativeElement.querySelector('.experience-card__recommendation')).toBeNull();
+  });
+
   it('should emit the experience id when toggled', () => {
     const toggledIds: string[] = [];
     component.expandToggle.subscribe((id) => toggledIds.push(id));

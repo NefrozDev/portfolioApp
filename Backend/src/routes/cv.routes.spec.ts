@@ -173,7 +173,7 @@ test('the default CV generator should produce a valid PDF from portfolio data', 
   assert.equal(pdf.subarray(0, 5).toString(), '%PDF-');
   assert.ok(pdf.length > 1_000);
   // Categorized skills occupy the opening page before the experience timeline.
-  assert.ok(pageCount >= 2 && pageCount <= 4);
+  assert.ok(pageCount >= 2 && pageCount <= 5);
   assert.match(pdf.subarray(-32).toString(), /%%EOF/);
 });
 

@@ -133,6 +133,7 @@
 }
 
 .experience-card__recommendation,
+.experience-card__profile,
 .experience-card__toggle {
   display: inline-flex;
   align-items: center;
@@ -148,7 +149,8 @@
     box-shadow 0.2s ease;
 }
 
-.experience-card__recommendation {
+.experience-card__recommendation,
+.experience-card__profile {
   width: auto;
   min-width: max-content;
   gap: 0.45rem;
@@ -170,7 +172,9 @@
 }
 
 .experience-card__recommendation:hover,
-.experience-card__recommendation:focus-visible {
+.experience-card__recommendation:focus-visible,
+.experience-card__profile:hover,
+.experience-card__profile:focus-visible {
   color: #ffffff;
   background: rgba(123, 97, 255, 0.24);
   border-color: rgba(123, 97, 255, 0.62);
@@ -287,7 +291,8 @@
     display: contents;
   }
 
-  .experience-card__recommendation {
+  .experience-card__recommendation,
+  .experience-card__profile {
     grid-column: 1;
     grid-row: 2;
     justify-self: start;
@@ -414,7 +419,8 @@
     height: 2.4rem;
   }
 
-  .experience-card__recommendation {
+  .experience-card__recommendation,
+  .experience-card__profile {
     min-height: 2.25rem;
     padding-inline: 0.5rem;
     font-size: 0.68rem;

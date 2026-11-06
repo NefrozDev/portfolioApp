@@ -157,6 +157,8 @@
     "all": "All",
     "logoPlaceholder": "Logo",
     "toggleDetails": "Toggle experience details",
+    "viewProfile": "Voir le profil {{company}}",
+    "profileTitle": "Profil",
     "viewRecommendationLetter": "Consulter la lettre de recommandation",
     "recommendationLetterTitle": "Recommandation",
     "closeRecommendationLetter": "Fermer la lettre de recommandation",
@@ -307,6 +309,15 @@
           "Maintenance et amélioration d'applications mobiles développées avec Angular et Ionic.",
           "Développement de fonctionnalités de géolocalisation et de flux RxJS, gestion d'état avec NgRx et styling des interfaces mobiles.",
           "Contribution à des initiatives de recherche et développement centrées sur l'expérience utilisateur et les performances applicatives."
+        ]
+      },
+      "codewars-training": {
+        "company": "Codewars",
+        "period": "Juil 2020 - Déc 2020",
+        "highlights": [
+          "Pratique de la résolution de problèmes algorithmiques sur Codewars, une plateforme de défis de programmation, jusqu'à atteindre le top 2 % des utilisateurs.",
+          "Plus de 500 kata réalisés, principalement en JavaScript, ainsi qu'en C# et en Python.",
+          "Obtention du rang global 4 kyu, en renforçant la réflexion algorithmique et l'optimisation du code."
         ]
       },
       "inforius-fullstack": {

@@ -28,4 +28,6 @@ export interface Experience {
   isExpanded: boolean;
   logoUrl?: string;
   recommendationLetterUrl?: string;
+  // Public external profile backing the experience, e.g. a coding platform account.
+  profileUrl?: string;
 }

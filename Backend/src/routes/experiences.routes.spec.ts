@@ -79,6 +79,7 @@ test('GET /api/experiences should include position statuses and the Akkodis Site
           ![
             'akkodis-pg-site-leader',
             'icgreen-lead-dev',
+            'codewars-training',
             'bloody-halloween-cofounder',
             'selectos-web-intern',
             'bluefeet-web-intern'
@@ -114,6 +115,35 @@ test('GET /api/experiences should place the Bloody Halloween co-founder role bef
   assert.equal(bloodyHalloweenExperience.highlights.length, 4);
   assert.match(bloodyHalloweenExperience.highlights[1], /JavaScript et PHP sur Shopify/);
   assert.equal(bloodyHalloweenExperience.recommendationLetterUrl, undefined);
+  assert.equal(bloodyHalloweenExperience.profileUrl, undefined);
+});
+
+test('GET /api/experiences should place the Codewars training between Noomia and Inforius', async () => {
+  const response = await request(app).get('/api/experiences?lang=fr');
+  const experienceIds = response.body.map((experience: { id: string }) => experience.id);
+  const codewarsIndex = experienceIds.indexOf('codewars-training');
+  const codewarsExperience = response.body[codewarsIndex];
+
+  assert.equal(response.status, 200);
+  assert.deepEqual(experienceIds.slice(codewarsIndex - 1, codewarsIndex + 2), [
+    'noomia-angular-ionic',
+    'codewars-training',
+    'inforius-fullstack'
+  ]);
+  assert.equal(codewarsExperience.company, 'Codewars');
+  assert.equal(codewarsExperience.role, 'Competitive Programming');
+  assert.equal(codewarsExperience.profileUrl, 'https://www.codewars.com/users/Nefroz');
+  assert.equal(codewarsExperience.status, 'self-employed');
+  assert.equal(codewarsExperience.period, 'Juil 2020 - Déc 2020');
+  assert.equal(codewarsExperience.logoUrl, '/img/experiences/codewars.svg');
+  assert.deepEqual(
+    codewarsExperience.technologies.map((technology: { name: string }) => technology.name),
+    ['JavaScript', 'C#', 'Python']
+  );
+  assert.equal(codewarsExperience.highlights.length, 3);
+  assert.match(codewarsExperience.highlights[0], /top 2 %/);
+  assert.match(codewarsExperience.highlights[1], /principalement en JavaScript/);
+  assert.equal(codewarsExperience.recommendationLetterUrl, undefined);
 });
 
 test('GET /api/experiences should list the Selectos and Bluefeet internships last', async () => {

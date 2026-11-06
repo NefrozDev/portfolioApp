@@ -102,6 +102,7 @@ const EXPERIENCE_METADATA: Array<
     | 'isExpanded'
     | 'logoUrl'
     | 'recommendationLetterUrl'
+    | 'profileUrl'
   >
 > = [
   {
@@ -270,6 +271,19 @@ const EXPERIENCE_METADATA: Array<
       { name: 'NgRx' },
       { name: 'SCSS' },
       { name: 'Windows' }
+    ],
+    isExpanded: false
+  },
+  {
+    id: 'codewars-training',
+    role: 'Competitive Programming',
+    status: 'self-employed',
+    logoUrl: '/img/experiences/codewars.svg',
+    profileUrl: 'https://www.codewars.com/users/Nefroz',
+    technologies: [
+      { name: 'JavaScript' },
+      { name: 'C#' },
+      { name: 'Python' }
     ],
     isExpanded: false
   },

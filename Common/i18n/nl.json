@@ -157,6 +157,8 @@
     "all": "All",
     "logoPlaceholder": "Logo",
     "toggleDetails": "Toggle experience details",
+    "viewProfile": "{{company}}-profiel bekijken",
+    "profileTitle": "Profiel",
     "viewRecommendationLetter": "Aanbevelingsbrief bekijken",
     "recommendationLetterTitle": "Aanbeveling",
     "closeRecommendationLetter": "Aanbevelingsbrief sluiten",
@@ -307,6 +309,15 @@
           "Onderhield en verbeterde mobiele applicaties gebouwd met Angular en Ionic.",
           "Werkte aan geolocatiefuncties, RxJS-flows, NgRx state management en mobiele UI-styling.",
           "Droeg bij aan R&D-initiatieven gericht op gebruikerservaring en applicatieprestaties."
+        ]
+      },
+      "codewars-training": {
+        "company": "Codewars",
+        "period": "Jul 2020 - Dec 2020",
+        "highlights": [
+          "Oefende algoritmisch probleemoplossen op Codewars, een platform met programmeeruitdagingen, en bereikte de top 2% van de gebruikers.",
+          "Voltooide meer dan 500 kata, voornamelijk in JavaScript en daarnaast in C# en Python.",
+          "Behaalde de algemene rang 4 kyu en versterkte daarbij algoritmisch denken en codeoptimalisatie."
         ]
       },
       "inforius-fullstack": {
