@@ -128,6 +128,8 @@ const EXPERIENCE_METADATA: Array<
       { name: 'Vitest' },
       { name: 'Playwright' },
       { name: 'SonarQube' },
+      { name: 'GitHub Actions' },
+      { name: 'Vercel' },
       { name: 'Docker' },
       { name: 'Linux' }
     ],

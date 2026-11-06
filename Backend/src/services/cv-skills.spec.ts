@@ -25,6 +25,8 @@ test('CV categories follow lifecycle order and preserve every current skill and 
   assert.ok(namesIn('backend').includes('NestJS'));
   assert.ok(namesIn('integration').includes('RAG'));
   assert.ok(namesIn('quality').includes('Playwright'));
+  assert.ok(namesIn('delivery').includes('GitHub Actions'));
+  assert.ok(namesIn('delivery').includes('Vercel'));
 });
 
 test('CV includes repository tools after architecture without duplicating position skills', () => {

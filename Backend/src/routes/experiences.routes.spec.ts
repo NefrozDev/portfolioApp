@@ -110,7 +110,7 @@ test('GET /api/experiences should list the Synapse Engineering founder role firs
     synapseExperience.technologies.find((technology: { name: string }) => technology.name === 'Angular'),
     { name: 'Angular', version: '22' }
   );
-  for (const name of ['NestJS', 'PostgreSQL', 'RAG', 'Playwright', 'SonarQube']) {
+  for (const name of ['NestJS', 'PostgreSQL', 'RAG', 'Playwright', 'SonarQube', 'GitHub Actions', 'Vercel']) {
     assert.ok(
       synapseExperience.technologies.some((technology: { name: string }) => technology.name === name),
       `missing ${name}`

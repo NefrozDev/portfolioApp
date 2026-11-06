@@ -18,6 +18,8 @@ const GLOSSARY_INFO_KEYS = {
   NestJS: 'app.glossary.nestJs',
   PostgreSQL: 'app.glossary.postgreSql',
   Playwright: 'app.glossary.playwright',
+  'GitHub Actions': 'app.glossary.githubActions',
+  Vercel: 'app.glossary.vercel',
   Gerrit: 'app.glossary.gerrit',
   i18n: 'app.glossary.i18n',
   Jasmine: 'app.glossary.jasmine',

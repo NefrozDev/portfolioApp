@@ -182,6 +182,8 @@ describe('InfoTerm', () => {
       'NestJS',
       'PostgreSQL',
       'Playwright',
+      'GitHub Actions',
+      'Vercel',
       'Microsoft Dynamics 365',
       'Power Platform',
       'Ionic',

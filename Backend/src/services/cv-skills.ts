@@ -14,7 +14,7 @@ const SKILL_CATEGORIES: Array<{ id: CategoryId; names: string[] }> = [
   { id: 'business', names: ['Microsoft Dynamics 365', 'Power Platform', 'Shopify', 'Automation'] },
   { id: 'integration', names: ['AI', 'RAG', 'ROS / ROS2', 'MQTT'] },
   { id: 'quality', names: ['Jasmine', 'Karma', 'Vitest', 'JSDOM', 'Playwright', 'SonarQube', 'Gerrit'] },
-  { id: 'delivery', names: ['Azure DevOps', 'Jenkins', 'Docker'] },
+  { id: 'delivery', names: ['Azure DevOps', 'GitHub Actions', 'Jenkins', 'Docker', 'Vercel'] },
   { id: 'infrastructure', names: ['Linux', 'Windows', 'Access Control', 'Server Hardening', 'OWASP'] }
 ];
 

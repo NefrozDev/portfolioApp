@@ -39,6 +39,8 @@
       "postgreSql": "PostgreSQL ist ein relationales Datenbanksystem, das Daten in Tabellen speichert und mit SQL abfragt.",
       "rag": "RAG (retrieval-augmented generation) ist eine KI-Technik, die vor dem Generieren einer Antwort relevante Dokumente abruft, damit die Antwort auf diesen Quellen beruht.",
       "playwright": "Playwright ist ein Testwerkzeug, das Webbrowser automatisiert, um End-to-End-Tests von Webanwendungen auszuführen, hauptsächlich aus JavaScript und TypeScript.",
+      "githubActions": "GitHub Actions ist eine in GitHub integrierte CI/CD-Plattform, die automatisierte Workflows wie Builds, Tests und Deployments ausführt, wenn sich der Code ändert.",
+      "vercel": "Vercel ist eine Cloud-Hosting-Plattform, die Webanwendungen und APIs automatisch aus einem Git-Repository baut und bereitstellt.",
       "gerrit": "Gerrit ist ein Werkzeug zur Codeprüfung und Verwaltung von Git-Repositorys, das einen Freigabeprozess vor dem Zusammenführen von Änderungen ergänzt.",
       "i18n": "Abkürzung für Internationalisierung, eine Softwareentwicklungspraxis, die Anwendungen auf mehrere Sprachen und regionale Formate vorbereitet, ohne ihren Quellcode zu ändern.",
       "jasmine": "Jasmine ist ein JavaScript-Werkzeugkasten zum Schreiben und Organisieren von Unit-Tests mit Assertions, Testsuiten und Test-Doubles.",
