@@ -203,6 +203,14 @@ const EXPERIENCE_METADATA: Array<
     isExpanded: false
   },
   {
+    id: 'akkodis-javascript-mentor',
+    role: 'JavaScript Mentor',
+    status: 'corporate',
+    logoUrl: '/img/experiences/akkodis.svg',
+    technologies: [{ name: 'JavaScript' }, { name: 'Mentoring' }],
+    isExpanded: false
+  },
+  {
     id: 'pg-lfe-consultant',
     role: 'Software Engineering Consultant',
     status: 'employee',

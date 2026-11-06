@@ -5,7 +5,7 @@ import { TechnologyTag } from '../../../Common/models/experience.model';
 type CategoryId = keyof AppTranslations['cv']['skillCategories'];
 
 const SKILL_CATEGORIES: Array<{ id: CategoryId; names: string[] }> = [
-  { id: 'planning', names: ['Consulting', 'Leadership', 'Team Leading', 'Project Management', 'Jira', 'ServiceNow', 'Phabricator'] },
+  { id: 'planning', names: ['Consulting', 'Leadership', 'Team Leading', 'Mentoring','Project Management', 'Jira', 'ServiceNow', 'Phabricator'] },
   { id: 'architecture', names: ['Monorepo', 'Nx', 'Feature-based'] },
   { id: 'versionControl', names: ['GitHub', 'GitLab', 'GitKraken', 'Bitbucket'] },
   { id: 'data', names: ['SQL', 'SQL Server', 'NoSQL', 'Data Processing'] },

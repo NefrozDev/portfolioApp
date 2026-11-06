@@ -17,6 +17,7 @@ test('CV categories follow lifecycle order and preserve every current skill and 
   assert.deepEqual(new Set(grouped), new Set(skills));
   assert.ok(groups[0].technologies.some((skill) => skill.name === 'Jira'));
   assert.ok(groups[0].technologies.some((skill) => skill.name === 'ServiceNow'));
+  assert.ok(groups[0].technologies.some((skill) => skill.name === 'Mentoring'));
 });
 
 test('CV includes repository tools after architecture without duplicating position skills', () => {

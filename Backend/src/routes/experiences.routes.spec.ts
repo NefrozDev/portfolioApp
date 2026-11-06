@@ -78,6 +78,7 @@ test('GET /api/experiences should include position statuses and the Akkodis Site
         (experience: { id: string }) =>
           ![
             'akkodis-pg-site-leader',
+            'akkodis-javascript-mentor',
             'icgreen-lead-dev',
             'codewars-training',
             'bloody-halloween-cofounder',
@@ -87,6 +88,32 @@ test('GET /api/experiences should include position statuses and the Akkodis Site
       )
       .every((experience: { status: string }) => experience.status === 'employee')
   );
+});
+
+test('GET /api/experiences should list the Akkodis JavaScript mentor role right after Site Leader', async () => {
+  const response = await request(app).get('/api/experiences?lang=fr');
+  const experienceIds = response.body.map((experience: { id: string }) => experience.id);
+  const siteLeaderIndex = experienceIds.indexOf('akkodis-pg-site-leader');
+  const siteLeaderExperience = response.body[siteLeaderIndex];
+  const mentorExperience = response.body[siteLeaderIndex + 1];
+
+  assert.equal(response.status, 200);
+  assert.equal(experienceIds.filter((id: string) => id === 'akkodis-javascript-mentor').length, 1);
+  assert.equal(mentorExperience.id, 'akkodis-javascript-mentor');
+  assert.equal(mentorExperience.company, 'Akkodis');
+  assert.equal(mentorExperience.role, 'JavaScript Mentor');
+  assert.equal(mentorExperience.status, 'corporate');
+  assert.equal(mentorExperience.period, siteLeaderExperience.period);
+  assert.equal(mentorExperience.logoUrl, '/img/experiences/akkodis.svg');
+  assert.deepEqual(
+    mentorExperience.technologies.map((technology: { name: string }) => technology.name),
+    ['JavaScript', 'Mentoring']
+  );
+  assert.equal(mentorExperience.highlights.length, 2);
+  assert.match(mentorExperience.highlights[0], /Mentor JavaScript de l'entreprise/);
+  assert.match(mentorExperience.highlights[1], /Coaching individuel/);
+  assert.equal(mentorExperience.recommendationLetterUrl, undefined);
+  assert.equal(mentorExperience.profileUrl, undefined);
 });
 
 test('GET /api/experiences should place the Bloody Halloween co-founder role before the internships', async () => {
