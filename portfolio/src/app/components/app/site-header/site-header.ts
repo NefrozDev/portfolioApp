@@ -30,12 +30,13 @@ import { NavItem } from '../../../../../../Common/models/nav-item.model';
 import { LanguageOption } from '../../../../../../Common/models/language.model';
 import { environment } from '../../../../environments/environment';
 import { AppStateService } from '../../../services/app-state';
+import { AccountMenu } from '../account-menu/account-menu';
 import { LanguageService } from '../../../services/language';
 
 @Component({
   selector: 'app-site-header',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive, TranslatePipe],
+  imports: [AccountMenu, RouterLink, RouterLinkActive, TranslatePipe],
   templateUrl: './site-header.html',
   styleUrls: ['./site-header.scss']
 })

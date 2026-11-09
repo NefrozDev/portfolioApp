@@ -9,6 +9,21 @@
       "downloadCv": "CV downloaden"
     },
     "language": "Language",
+    "account": {
+      "signIn": "Aanmelden",
+      "signingIn": "Aanmelden…",
+      "menuLabel": "Synapse-account: {{username}}",
+      "manage": "Mijn Synapse-account beheren",
+      "signOut": "Afmelden",
+      "signInUnavailable": "Aanmelden is nu niet mogelijk. Probeer het zo meteen opnieuw.",
+      "callback": {
+        "title": "Aanmelden",
+        "progress": "Je wordt aangemeld…",
+        "cancelled": "Aanmelden geannuleerd.",
+        "failed": "Aanmelden is mislukt. Probeer het zo meteen opnieuw.",
+        "back": "Terug naar de site"
+      }
+    },
     "pageUnderConstruction": "Pagina in aanbouw",
     "seo": {
       "home": "Portfolio van {{ name }}, {{ position }}: werkervaring, projecten en contactgegevens.",

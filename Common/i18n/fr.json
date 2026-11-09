@@ -9,6 +9,21 @@
       "downloadCv": "Télécharger le CV"
     },
     "language": "Language",
+    "account": {
+      "signIn": "Se connecter",
+      "signingIn": "Connexion…",
+      "menuLabel": "Compte Synapse : {{username}}",
+      "manage": "Gérer mon compte Synapse",
+      "signOut": "Se déconnecter",
+      "signInUnavailable": "La connexion est indisponible pour le moment. Réessayez dans un instant.",
+      "callback": {
+        "title": "Connexion",
+        "progress": "Connexion en cours…",
+        "cancelled": "Connexion annulée.",
+        "failed": "La connexion n'a pas abouti. Réessayez dans un instant.",
+        "back": "Retour au site"
+      }
+    },
     "pageUnderConstruction": "Page en construction",
     "seo": {
       "home": "Portfolio de {{ name }}, {{ position }} : expériences professionnelles, projets et coordonnées.",

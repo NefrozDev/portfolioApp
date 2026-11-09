@@ -1,0 +1,59 @@
+@if (account.user(); as user) {
+  <button
+    type="button"
+    class="account-menu__trigger"
+    aria-haspopup="true"
+    aria-controls="account-menu-list"
+    [attr.aria-label]="'app.account.menuLabel' | translate: { username: user.username }"
+    [attr.aria-expanded]="isMenuOpen()"
+    (click)="toggleMenu()"
+  >
+    <span class="account-menu__avatar" aria-hidden="true">{{ user.username.charAt(0).toUpperCase() }}</span>
+    <span class="account-menu__name">{{ user.username }}</span>
+    <span
+      class="account-menu__chevron"
+      [class.account-menu__chevron--open]="isMenuOpen()"
+      aria-hidden="true"
+    ></span>
+  </button>
+
+  <div
+    id="account-menu-list"
+    class="account-menu__list"
+    [class.account-menu__list--open]="isMenuOpen()"
+    [attr.aria-hidden]="!isMenuOpen()"
+  >
+    <a
+      class="account-menu__option"
+      [href]="account.accountUrl"
+      target="_blank"
+      rel="noopener"
+      [attr.tabindex]="isMenuOpen() ? 0 : -1"
+      (click)="isMenuOpen.set(false)"
+    >
+      {{ 'app.account.manage' | translate }}
+    </a>
+    <button
+      type="button"
+      class="account-menu__option"
+      [attr.tabindex]="isMenuOpen() ? 0 : -1"
+      (click)="signOut()"
+    >
+      {{ 'app.account.signOut' | translate }}
+    </button>
+  </div>
+} @else {
+  <button
+    type="button"
+    class="account-menu__sign-in"
+    [disabled]="isSigningIn()"
+    (click)="signIn()"
+  >
+    {{ (isSigningIn() ? 'app.account.signingIn' : 'app.account.signIn') | translate }}
+  </button>
+  @if (signInFailed()) {
+    <p class="account-menu__error" role="alert">
+      {{ 'app.account.signInUnavailable' | translate }}
+    </p>
+  }
+}

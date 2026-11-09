@@ -33,6 +33,20 @@ describe('routes', () => {
     expect(TestBed.runInInjectionContext(redirectToPreferredLanguage)).toBe(AppLanguage.NL);
   });
 
+  it('should handle the Synapse sign-in callback outside the language prefix, without the header', async () => {
+    const callback = routes.find((route) => route.path === 'auth/callback');
+
+    expect(routes.indexOf(callback!)).toBeLessThan(
+      routes.findIndex((route) => route.path === ':lang')
+    );
+    expect(callback?.data?.['showSiteHeader']).toBeFalse();
+    expect(callback?.title).toBe('app.account.callback.title');
+    const component = (await callback?.loadComponent?.()) as
+      | { ɵcmp?: { selectors?: string[][] } }
+      | undefined;
+    expect(component?.ɵcmp?.selectors?.[0]?.[0]).toBe('app-sign-in-callback');
+  });
+
   it('should protect language-prefixed routes with the language guard', () => {
     const languageRoute = routes.find((route) => route.path === ':lang');
 

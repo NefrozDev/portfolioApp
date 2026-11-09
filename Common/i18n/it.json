@@ -9,6 +9,21 @@
       "downloadCv": "Scarica il CV"
     },
     "language": "Language",
+    "account": {
+      "signIn": "Accedi",
+      "signingIn": "Accesso in corso…",
+      "menuLabel": "Account Synapse: {{username}}",
+      "manage": "Gestisci il mio account Synapse",
+      "signOut": "Esci",
+      "signInUnavailable": "L'accesso non è disponibile al momento. Riprova tra poco.",
+      "callback": {
+        "title": "Accesso",
+        "progress": "Accesso in corso…",
+        "cancelled": "Accesso annullato.",
+        "failed": "L'accesso non è riuscito. Riprova tra poco.",
+        "back": "Torna al sito"
+      }
+    },
     "pageUnderConstruction": "Pagina in costruzione",
     "seo": {
       "home": "Portfolio di {{ name }}, {{ position }}: esperienze professionali, progetti e contatti.",

@@ -14,6 +14,16 @@ export const routes: Routes = [
     redirectTo: redirectToPreferredLanguage
   },
   {
+    // Back from the Synapse identity service after signing in.
+    path: 'auth/callback',
+    data: { showSiteHeader: false },
+    loadComponent: () =>
+      import('../../components/pages/sign-in-callback/sign-in-callback').then(
+        (m) => m.SignInCallback
+      ),
+    title: 'app.account.callback.title'
+  },
+  {
     path: ':lang',
     canActivate: [languageGuard],
     children: [

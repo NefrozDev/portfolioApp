@@ -9,6 +9,21 @@
       "downloadCv": "Lebenslauf herunterladen"
     },
     "language": "Language",
+    "account": {
+      "signIn": "Anmelden",
+      "signingIn": "Anmeldung…",
+      "menuLabel": "Synapse-Konto: {{username}}",
+      "manage": "Mein Synapse-Konto verwalten",
+      "signOut": "Abmelden",
+      "signInUnavailable": "Die Anmeldung ist gerade nicht verfügbar. Versuchen Sie es gleich noch einmal.",
+      "callback": {
+        "title": "Anmeldung",
+        "progress": "Sie werden angemeldet…",
+        "cancelled": "Anmeldung abgebrochen.",
+        "failed": "Die Anmeldung hat nicht geklappt. Versuchen Sie es gleich noch einmal.",
+        "back": "Zurück zur Website"
+      }
+    },
     "pageUnderConstruction": "Seite im Aufbau",
     "seo": {
       "home": "Portfolio von {{ name }}, {{ position }}: Berufserfahrung, Projekte und Kontaktdaten.",

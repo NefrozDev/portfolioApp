@@ -28,6 +28,7 @@
     "@angular/ssr": "^20.0.0",
     "@ngx-translate/core": "^18.0.0",
     "@portfolio/contracts": "file:../Common",
+    "oauth4webapi": "^3.8.8",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"

@@ -9,6 +9,21 @@
       "downloadCv": "Descargar CV"
     },
     "language": "Language",
+    "account": {
+      "signIn": "Iniciar sesión",
+      "signingIn": "Iniciando sesión…",
+      "menuLabel": "Cuenta Synapse: {{username}}",
+      "manage": "Gestionar mi cuenta Synapse",
+      "signOut": "Cerrar sesión",
+      "signInUnavailable": "El inicio de sesión no está disponible ahora. Inténtalo de nuevo en un momento.",
+      "callback": {
+        "title": "Inicio de sesión",
+        "progress": "Iniciando tu sesión…",
+        "cancelled": "Inicio de sesión cancelado.",
+        "failed": "No se pudo iniciar sesión. Inténtalo de nuevo en un momento.",
+        "back": "Volver al sitio"
+      }
+    },
     "pageUnderConstruction": "Página en construcción",
     "seo": {
       "home": "Portfolio de {{ name }}, {{ position }}: experiencia profesional, proyectos y datos de contacto.",

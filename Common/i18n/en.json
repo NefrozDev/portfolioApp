@@ -9,6 +9,21 @@
       "downloadCv": "Download CV"
     },
     "language": "Language",
+    "account": {
+      "signIn": "Sign in",
+      "signingIn": "Signing in…",
+      "menuLabel": "Synapse account: {{username}}",
+      "manage": "Manage my Synapse account",
+      "signOut": "Sign out",
+      "signInUnavailable": "Sign-in is unavailable right now. Try again in a moment.",
+      "callback": {
+        "title": "Signing in",
+        "progress": "Signing you in…",
+        "cancelled": "Sign-in cancelled.",
+        "failed": "Sign-in didn't work. Try again in a moment.",
+        "back": "Back to the site"
+      }
+    },
     "pageUnderConstruction": "Page under construction",
     "seo": {
       "home": "Portfolio of {{ name }}, {{ position }}: professional experience, projects and contact details.",

@@ -1,0 +1,166 @@
+// Mirrors the header's language switcher, so the two read as one group.
+:host {
+  position: relative;
+  display: block;
+}
+
+.account-menu__trigger,
+.account-menu__sign-in {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  min-height: 2.25rem;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(138, 180, 255, 0.55);
+  background: linear-gradient(
+    90deg,
+    rgba(123, 97, 255, 0.26),
+    rgba(79, 140, 255, 0.26)
+  );
+  color: #ffffff;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.account-menu__trigger {
+  padding-left: 0.35rem;
+}
+
+.account-menu__trigger:hover,
+.account-menu__sign-in:hover:not(:disabled) {
+  transform: translateY(-0.0625rem);
+  border-color: rgba(138, 180, 255, 0.9);
+  box-shadow: 0 0 1rem rgba(99, 102, 241, 0.3);
+}
+
+.account-menu__sign-in:disabled {
+  cursor: progress;
+  opacity: 0.7;
+}
+
+.account-menu__trigger:focus-visible,
+.account-menu__sign-in:focus-visible,
+.account-menu__option:focus-visible {
+  outline: 2px solid #a5b4fc;
+  outline-offset: 0.15rem;
+}
+
+.account-menu__avatar {
+  display: grid;
+  place-items: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: rgba(165, 180, 252, 0.3);
+  font-size: 0.8rem;
+}
+
+// A long username must not push the language switcher away.
+.account-menu__name {
+  max-width: 9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.account-menu__chevron {
+  width: 0.45rem;
+  height: 0.45rem;
+  margin-top: -0.2rem;
+  border-right: 0.1rem solid currentColor;
+  border-bottom: 0.1rem solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 0.25s ease;
+}
+
+.account-menu__chevron--open {
+  margin-top: 0.2rem;
+  transform: rotate(-135deg);
+}
+
+.account-menu__list {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  top: calc(100% + 0.65rem);
+  right: 0;
+  width: 14rem;
+  padding: 0.4rem;
+  border: 1px solid rgba(138, 180, 255, 0.22);
+  border-radius: 0.85rem;
+  background: rgba(15, 23, 42, 0.98);
+  box-shadow: 0 1rem 2.5rem rgba(2, 6, 23, 0.58);
+  backdrop-filter: blur(16px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-0.75rem) scale(0.94);
+  transform-origin: top right;
+  transition:
+    opacity 0.28s ease,
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    visibility 0s linear 0.35s;
+}
+
+.account-menu__list--open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+  transition-delay: 0s;
+}
+
+.account-menu__option {
+  display: block;
+  width: 100%;
+  padding: 0.65rem 0.7rem;
+  border: 0;
+  border-radius: 0.55rem;
+  background: transparent;
+  color: #cbd5e1;
+  font: inherit;
+  font-size: 0.88rem;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background 0.18s ease,
+    color 0.18s ease;
+}
+
+.account-menu__option:hover {
+  background: rgba(99, 102, 241, 0.16);
+  color: #ffffff;
+}
+
+.account-menu__error {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  width: 14rem;
+  margin: 0;
+  padding: 0.5rem 0.7rem;
+  border-radius: 0.55rem;
+  background: rgba(15, 23, 42, 0.98);
+  color: #fca5a5;
+  font-size: 0.8rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .account-menu__trigger,
+  .account-menu__sign-in,
+  .account-menu__chevron,
+  .account-menu__list,
+  .account-menu__option {
+    transition-duration: 0.01ms;
+  }
+}
