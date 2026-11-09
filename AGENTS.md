@@ -82,6 +82,8 @@ When working inside a subproject directly:
 - Page components live under `portfolio/src/app/components/pages/`.
 - Services, guards, and pipes each have their own folders under `portfolio/src/app/`.
 - Keep templates, styles, specs, and component TypeScript files together using the existing naming pattern.
+- The header offers an optional sign-in with the Synapse account (the `synapse-auth` identity service shared by Synapse Engineering apps). The portfolio signs in from the browser as the public OpenID Connect client `portfolio` (code flow with PKCE, `oauth4webapi`, loaded on demand) through `services/synapse-account.ts`; the identity service sends the browser back to `/auth/callback` (`sign-in-callback` page, outside the language prefix). Only the username is kept, in `sessionStorage`, until the ID token expires; nothing goes to the portfolio API. `environment.identityIssuer` names the service, and `siteUrl` must match the redirect URI registered in synapse-auth's clients files.
+- `app-account-menu` skips hydration: prerendered pages cannot know who is signed in.
 
 ## Backend Notes
 
