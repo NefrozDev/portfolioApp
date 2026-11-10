@@ -58,6 +58,13 @@ select {
   background: none;
 }
 
+// One focus ring for everything the keyboard reaches, in the site's light indigo (about 9:1 on
+// the dark background); components with their own ring keep it.
+:focus-visible {
+  outline: 2px solid #a5b4fc;
+  outline-offset: 0.15rem;
+}
+
 button {
   cursor: pointer;
 }
