@@ -35,7 +35,8 @@ jobs:
       # Accessibility (WCAG 2.2 AA) in a real browser, against the build just made.
       - name: Check accessibility
         working-directory: portfolio
-        run: npx playwright install --with-deps chromium && npm run e2e
+        # The pinned local Playwright, never one npx would fetch.
+        run: npm run e2e:install -- --with-deps && npm run e2e
 
       - name: Keep the accessibility results
         if: failure()

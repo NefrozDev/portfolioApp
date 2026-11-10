@@ -15,7 +15,8 @@
     "test:coverage": "ng test portfolio --watch=false --browsers=ChromeHeadlessNoSandbox --code-coverage && node scripts/check-coverage.mjs",
     "test:libs": "npm run build:contracts && ng test portfolio-ui --watch=false --browsers=ChromeHeadlessNoSandbox && ng test portfolio-sdk --watch=false --browsers=ChromeHeadlessNoSandbox",
     "test:projects": "npm run build:libs && ng test demo-template --watch=false --browsers=ChromeHeadlessNoSandbox",
-    "e2e": "playwright test"
+    "e2e": "playwright test",
+    "e2e:install": "playwright install chromium"
   },
   "private": true,
   "dependencies": {

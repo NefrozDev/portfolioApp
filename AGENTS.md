@@ -43,7 +43,7 @@ Run commands from the repository root unless noted otherwise.
 - Frontend development server: `npm run start:front`
 - Frontend build: `npm run build:front`
 - Frontend tests: `npm run test:front`
-- Frontend accessibility in Chromium: `npm run test:e2e:front` (once: `npx --prefix portfolio playwright install chromium`)
+- Frontend accessibility in Chromium: `npm run test:e2e:front` (once: `npm --prefix portfolio run e2e:install`)
 - Backend development server: `npm run start:back`
 - Backend build: `npm run build:back`
 - Backend tests: `npm run test:back`
