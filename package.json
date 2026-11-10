@@ -5,6 +5,7 @@
     "start:front": "npm --prefix portfolio run start",
     "build:front": "npm --prefix portfolio run build",
     "test:front": "npm --prefix portfolio run test",
+    "test:e2e:front": "npm --prefix portfolio run build && npm --prefix portfolio run e2e",
     "build:projects": "npm --prefix portfolio run build:projects",
     "test:projects": "npm --prefix portfolio run test:libs && npm --prefix portfolio run test:projects",
 

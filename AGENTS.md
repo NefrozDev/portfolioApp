@@ -43,6 +43,7 @@ Run commands from the repository root unless noted otherwise.
 - Frontend development server: `npm run start:front`
 - Frontend build: `npm run build:front`
 - Frontend tests: `npm run test:front`
+- Frontend accessibility in Chromium: `npm run test:e2e:front` (once: `npx --prefix portfolio playwright install chromium`)
 - Backend development server: `npm run start:back`
 - Backend build: `npm run build:back`
 - Backend tests: `npm run test:back`
@@ -60,6 +61,7 @@ When working inside a subproject directly:
 - Preserve the existing TypeScript style and file organization.
 - Prefer updating or adding focused tests near the code being changed.
 - When building or changing code, add or update the matching unit tests in the relevant `.spec.ts` file as part of the same change.
+- The site meets WCAG 2.2 AA. `portfolio/e2e` (Playwright, in CI) opens the prerendered pages and their states (`support/screens.ts`), with the API and the identity service mocked, and checks the automated axe rules (desktop and phone, English and French), the keyboard (each focus stop has an indicator at 3:1 and is not hidden; the global ring is `#a5b4fc`), and reflow and text spacing at 320px in all six languages. A new page or state goes into `screens.ts`. Screen readers and the wording of texts still need a manual check.
 - Do not edit generated build output, dependency folders, or lockfiles unless the task requires it.
 - Be careful with shared code in `Common/`; changes there can affect both frontend and backend behavior.
 
