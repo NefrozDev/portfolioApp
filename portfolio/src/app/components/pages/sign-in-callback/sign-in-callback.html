@@ -1,5 +1,6 @@
 <section class="sign-in-callback">
   <div class="sign-in-callback__card glass-card">
+    <h1 class="sign-in-callback__title">{{ 'app.account.callback.title' | translate }}</h1>
     @switch (status()) {
       @case ('pending') {
         <p class="sign-in-callback__text" role="status">

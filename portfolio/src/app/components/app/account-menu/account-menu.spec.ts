@@ -105,10 +105,17 @@ describe('AccountMenu', () => {
 
     it('should show their name, with the menu closed', () => {
       expect(signIn()).toBeNull();
-      expect(trigger()?.textContent).toContain('ada');
-      expect(trigger()?.getAttribute('aria-label')).toBe(
-        'Synapse account: ada'
+      // Named by its text, which contains the name shown (WCAG 2.5.3), not by an aria-label.
+      expect(trigger()?.hasAttribute('aria-label')).toBeFalse();
+      expect(trigger()?.querySelector('.sr-only')?.textContent?.trim()).toBe(
+        'Synapse account:'
       );
+      expect(trigger()?.querySelector('.account-menu__name')?.textContent).toBe(
+        'ada'
+      );
+      expect(
+        trigger()?.querySelector('.account-menu__avatar')?.getAttribute('aria-hidden')
+      ).toBe('true');
       expect(trigger()?.getAttribute('aria-expanded')).toBe('false');
       expect(
         element

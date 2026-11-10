@@ -4,11 +4,12 @@
     class="account-menu__trigger"
     aria-haspopup="true"
     aria-controls="account-menu-list"
-    [attr.aria-label]="'app.account.menuLabel' | translate: { username: user.username }"
     [attr.aria-expanded]="isMenuOpen()"
     (click)="toggleMenu()"
   >
+    <!-- Named by its text, "Synapse account: <username>", which contains what is shown (WCAG 2.5.3). -->
     <span class="account-menu__avatar" aria-hidden="true">{{ user.username.charAt(0).toUpperCase() }}</span>
+    <span class="sr-only">{{ 'app.account.menuLabel' | translate: { username: '' } }}</span>
     <span class="account-menu__name">{{ user.username }}</span>
     <span
       class="account-menu__chevron"

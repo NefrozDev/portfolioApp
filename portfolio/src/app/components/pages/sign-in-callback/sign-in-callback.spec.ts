@@ -62,6 +62,8 @@ describe('SignInCallback', () => {
       returnTo: '/en/contact'
     });
 
+    // A heading names the page for screen readers, whatever the outcome.
+    expect(element.querySelector('h1')?.textContent?.trim()).toBe('Signing in');
     expect(element.querySelector('[role="alert"]')?.textContent?.trim()).toBe(
       'Sign-in cancelled.'
     );
