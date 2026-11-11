@@ -1,4 +1,4 @@
-import { DOCUMENT } from '@angular/core';
+import { DOCUMENT, PLATFORM_ID } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Router, provideRouter } from '@angular/router';
 
@@ -109,5 +109,26 @@ describe('SignInCallback', () => {
         .querySelector('[role="status"]')
         ?.textContent?.trim()
     ).toBe('Signing you in…');
+  });
+
+  it('should not exchange the code when rendered on the server', async () => {
+    completeSignIn = jasmine.createSpy('completeSignIn');
+    await TestBed.configureTestingModule({
+      imports: [SignInCallback],
+      providers: [
+        provideRouter([]),
+        ...provideTestI18n(),
+        { provide: SynapseAccountService, useValue: { completeSignIn } },
+        { provide: PLATFORM_ID, useValue: 'server' }
+      ]
+    }).compileComponents();
+    const fixture = TestBed.createComponent(SignInCallback);
+    fixture.detectChanges();
+    await fixture.whenStable();
+
+    expect(completeSignIn).not.toHaveBeenCalled();
+    expect(
+      fixture.nativeElement.querySelector('[role="status"]')
+    ).not.toBeNull();
   });
 });

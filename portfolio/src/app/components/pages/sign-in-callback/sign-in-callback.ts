@@ -2,6 +2,7 @@ import {
   ChangeDetectionStrategy,
   Component,
   DOCUMENT,
+  OnInit,
   PLATFORM_ID,
   inject,
   signal
@@ -26,17 +27,18 @@ type CallbackStatus = 'pending' | 'cancelled' | 'failed';
   styleUrls: ['./sign-in-callback.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SignInCallback {
+export class SignInCallback implements OnInit {
   private readonly account = inject(SynapseAccountService);
   private readonly router = inject(Router);
   private readonly document = inject(DOCUMENT);
+  private readonly platformId = inject(PLATFORM_ID);
 
   protected readonly status = signal<CallbackStatus>('pending');
   protected readonly returnTo = signal('/');
 
-  constructor() {
+  ngOnInit(): void {
     // Never prerendered (client-side route), but the check keeps it safe.
-    if (isPlatformBrowser(inject(PLATFORM_ID))) {
+    if (isPlatformBrowser(this.platformId)) {
       void this.complete();
     }
   }
