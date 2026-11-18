@@ -10,10 +10,10 @@ const SKILL_CATEGORIES: Array<{ id: CategoryId; names: string[] }> = [
   { id: 'versionControl', names: ['GitHub', 'GitLab', 'GitKraken', 'Bitbucket'] },
   { id: 'data', names: ['SQL', 'SQL Server', 'PostgreSQL', 'NoSQL', 'Data Processing'] },
   { id: 'backend', names: ['C#', '.NET', 'Python', 'PHP', 'Node.js', 'Express', 'NestJS', 'FastAPI', 'REST API', 'WinDev'] },
-  { id: 'frontend', names: ['TypeScript', 'JavaScript', 'Angular', 'HTML', 'CSS', 'SCSS', 'Ionic', 'RxJS', 'NgRx', 'i18n', 'WordPress'] },
+  { id: 'frontend', names: ['TypeScript', 'JavaScript', 'Angular', 'HTML', 'CSS', 'SCSS', 'Figma', 'Ionic', 'RxJS', 'NgRx', 'i18n', 'WordPress'] },
   { id: 'business', names: ['Microsoft Dynamics 365', 'Power Platform', 'Shopify', 'Automation'] },
   { id: 'integration', names: ['AI', 'RAG', 'ROS / ROS2', 'MQTT'] },
-  { id: 'quality', names: ['Jasmine', 'Karma', 'Vitest', 'JSDOM', 'Playwright', 'SonarQube', 'Gerrit'] },
+  { id: 'quality', names: ['Jasmine', 'Karma', 'Vitest', 'JSDOM', 'Playwright', 'WCAG', 'SonarQube', 'Gerrit'] },
   { id: 'delivery', names: ['Azure DevOps', 'GitHub Actions', 'Jenkins', 'Docker', 'Vercel'] },
   { id: 'infrastructure', names: ['Linux', 'Windows', 'Access Control', 'Server Hardening', 'OWASP'] }
 ];

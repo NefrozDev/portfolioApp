@@ -81,6 +81,8 @@
       "powerPlatform": "Power Platform es una plataforma low-code para crear aplicaciones y automatizar procesos.",
       "ionic": "Ionic es una caja de herramientas de JavaScript y TypeScript para crear aplicaciones móviles con tecnologías web.",
       "ngrx": "NgRx es una biblioteca de TypeScript para gestionar el estado compartido en aplicaciones Angular.",
+      "figma": "Figma es una herramienta en línea de diseño de interfaces que sirve para crear maquetas y prototipos y compartirlos con los desarrolladores.",
+      "wcag": "Las WCAG son las pautas de accesibilidad web publicadas por el W3C: describen cómo hacer que un sitio sea utilizable por personas con discapacidad, por ejemplo con el teclado o un lector de pantalla.",
       "seo": "El SEO es un conjunto de prácticas que ayuda a los buscadores a entender y encontrar un sitio web.",
       "ciCd": "CI/CD es una práctica de desarrollo que automatiza las pruebas y la entrega de software."
     },

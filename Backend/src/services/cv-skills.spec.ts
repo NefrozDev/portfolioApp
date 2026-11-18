@@ -25,6 +25,12 @@ test('CV categories follow lifecycle order and preserve every current skill and 
   assert.ok(namesIn('backend').includes('NestJS'));
   assert.ok(namesIn('integration').includes('RAG'));
   assert.ok(namesIn('quality').includes('Playwright'));
+  // Personal projects: interface design and the accessibility level they meet.
+  assert.ok(namesIn('frontend').includes('Figma'));
+  assert.deepEqual(
+    groups.find((group) => group.id === 'quality')?.technologies.find((skill) => skill.name === 'WCAG'),
+    { name: 'WCAG', version: '2.2 AA' }
+  );
   assert.ok(namesIn('delivery').includes('GitHub Actions'));
   assert.ok(namesIn('delivery').includes('Vercel'));
 });

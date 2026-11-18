@@ -156,6 +156,8 @@ describe('InfoTerm', () => {
       'WebSocket',
       'ROS / ROS2',
       'MQTT',
+      'Figma',
+      'WCAG',
       'AI',
       'Gerrit',
       'i18n',

@@ -45,6 +45,8 @@ const GLOSSARY_INFO_KEYS = {
   'Power Platform': 'app.glossary.powerPlatform',
   Ionic: 'app.glossary.ionic',
   NgRx: 'app.glossary.ngrx',
+  Figma: 'app.glossary.figma',
+  WCAG: 'app.glossary.wcag',
   seo: 'app.glossary.seo',
   'ci-cd': 'app.glossary.ciCd'
 } as const;
